@@ -19,13 +19,17 @@ const azulNeon = keyframes`
 
 const StyledContainer = styled.div`
 
-    width: 100%;
-    height: 80%;
+    width: 100%;    
     
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
+    @media (max-width: 600px) {
+
+        margin-top: -260px;
+
+    }
 
 `;
 
@@ -34,6 +38,38 @@ const StyledCenter = styled.div`
     width: 50%;
     
     padding: 10px 10px;
+
+   
+    @media (max-width: 2200px) {
+
+        width: 60%;
+
+    }
+
+    @media (max-width: 1600px) {
+
+        width: 70%;
+
+    }
+
+    @media (max-width: 1300px) {
+
+        width: 80%;
+
+    }
+
+    @media (max-width: 1000px) {
+
+        width: 90%;
+
+    }
+
+    @media (max-width: 800px) {
+
+        width: 100%;
+        padding: 10px 20px;
+
+    }
 
 `;
 
@@ -54,6 +90,30 @@ const StyledTitle = styled.h3`
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
+    @media (max-width: 800px) {
+
+        padding-left: 50px;
+
+    }
+
+    @media (max-width: 800px) {
+
+        padding-left: 50px;
+
+    }
+
+    @media (max-width: 520px) {
+
+        padding-left: 30px;
+
+    }
+
+    @media (max-width: 450px) {
+
+        padding-left: 15px;
+
+    }
+
 `;
 
 const StyledComment = styled.h4`
@@ -62,6 +122,24 @@ const StyledComment = styled.h4`
 
     color: ${props => props.theme.colorMainBlueGray};
     letter-spacing: 2px;
+
+    @media (max-width: 800px) {
+
+        padding-left: 50px;
+
+    }
+
+    @media (max-width: 520px) {
+
+        padding-left: 30px;
+
+    }
+
+    @media (max-width: 450px) {
+
+           padding-left: 15px;
+
+    }
 
 `;
 

@@ -10,8 +10,52 @@
 
     height: 100vh;
 
-   
+    position: relative;  
+    
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    border-bottom: 1px solid $Main-Blue-Clear1;
+
+    //box-shadow: -2px 1px 10px $Main-Blue-Clear1 inset;
 
 }
+
+#mobil-menu-icon {
+
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: none;
+    color: $Main-Blue-Gray;
+    
+
+    &:active {
+
+        border: $Main-Blue-Clear1 solid 1px;
+        border-radius: 5px;       
+
+
+    }
+
+    @media (max-width: 600px) {
+
+        display: inline-block;
+        padding: 10px;        
+        @include fontSize(2.2); 
+        z-index: 1000;
+     
+    }
+
+    & span {
+
+        margin-left: 10px;
+        font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
+    }
+
+    
+
+}
+
+
 
 

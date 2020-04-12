@@ -31,7 +31,7 @@ const StyledContainer = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to right,#0ff,#ff0,#0ff);
+        background: linear-gradient(to right,#66CAF2,#C1D0D9,#468BA6,#C1D0D9);
         mix-blend-mode: color;
         pointer-events: none;
 
@@ -61,8 +61,38 @@ const StyledName = styled.h1`
     padding-left: 70px;
 
 
-    
+    @media (max-width: 800px) {
 
+        font-size: 6rem;
+
+    }
+
+    @media (max-width: 700px) {
+
+        font-size: 5rem;
+
+    }
+
+    @media (max-width: 600px) {
+
+        font-size: 5rem;
+        padding-left: 40px;
+
+    }
+
+    @media (max-width: 520px) {
+       
+        font-size: 4rem;
+        padding-left: 30px;
+
+    }
+
+    @media (max-width: 450px) {
+       
+       font-size: 3rem;
+       padding-left: 15px;
+
+    }
    
 `;
 

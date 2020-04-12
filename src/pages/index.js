@@ -9,6 +9,11 @@ import SEO from "../components/seo"
 import theme from '../StyledComponents/theme';
 import { ThemeProvider } from 'styled-components';
 
+import '../FontAwesome/library';
+
+import About from "../components/About/About"
+
+
 
 const IndexPage = () => {
 
@@ -17,10 +22,10 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme} >
+    <ThemeProvider theme={theme} >      
       <Layout>
-      <SEO title="Home" />
-      <h1>HELLO FROM INDEX</h1>   
+        <SEO title="Home" />      
+        <About />
       </Layout>
     </ThemeProvider>    
   ); 

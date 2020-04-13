@@ -54,8 +54,7 @@ const StyledName = styled.h1`
     position: absolute;
     top: 50%;    
     transform: translateY(-50%);
-    width: 100%;
-    color: ${props => props.theme.colorMainWhite};
+    width: 100%;    
     font-family: sans-serif, Verdana, Geneva, Tahoma;
     letter-spacing: 1rem;
     padding-left: 70px;
@@ -104,8 +103,11 @@ const StyledLetter = styled.span`
     animation-name: ${animate};
     animation-duration: 1s;   
     animation-fill-mode: forwards;
-    color: ${props => props.theme.colorMainWhite};
+    color: ${props => props.theme.colorMainBlueGray};
 
+    font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
+
+    
     &:nth-child(1) {
 
         animation-delay: 0s;

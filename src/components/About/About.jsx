@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
 
-import { rgba } from 'polished';
+import AboutContent from './AboutContent';
 
 
 const BackgroundSection = ({ className, children }) => {
@@ -35,39 +35,16 @@ const BackgroundSection = ({ className, children }) => {
 const StyledBackgroundSection = styled(BackgroundSection)`
 
     width: 100%;
-    height: 50rem;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
+    
+    padding: 30px 10px 100px 10px;
    
-`;
-
-const StyledCenter = styled.div`
-
-    width: 70%;
-
-    height: 70%;
-
-    background-color: ${props => rgba(props.theme.colorMainBlueGray,0.2) };
-
-    border-radius: 10px;
-
-    box-shadow: 0px 0px 15px ${props => props.theme.colorMainBlueClear1};
-
-    color: ${props => props.theme.colorMainBlueGray };
-
 `;
 
 
 function About() {
     return (
         <StyledBackgroundSection>
-            <StyledCenter>
-                HELLO
-            </StyledCenter>
+           <AboutContent />
         </StyledBackgroundSection>
     );
 }

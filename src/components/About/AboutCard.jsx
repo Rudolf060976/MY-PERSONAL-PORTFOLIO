@@ -39,6 +39,13 @@ const StyledCardContainer = styled.div`
 
     border-radius: 5px;
 
+    @media (max-width: 450px) {
+
+        min-width: 280px;
+        width: 280px;
+
+    }
+
 `;
 
 const StyledImage = styled.img`
@@ -83,6 +90,28 @@ const StyledDataName = styled.h6`
     
     padding-bottom: 5px;
 
+    @media (max-width: 1600px) {
+
+        font-size: 2.2rem;
+
+
+    }
+
+    @media (max-width: 1000px) {
+
+        font-size: 2.4rem;
+
+
+    }
+
+    @media (max-width: 700px) {
+
+        font-size: 2.6rem;
+
+
+    }
+
+
 `;
 
 const StyledDataTitle = styled.p`
@@ -92,9 +121,28 @@ const StyledDataTitle = styled.p`
 
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
 
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 
-     
+    @media (max-width: 1600px) {
+
+        font-size: 1.6rem;
+
+
+    }
+
+    @media (max-width: 1000px) {
+
+        font-size: 1.8rem;
+
+
+    }
+
+    @media (max-width: 700px) {
+
+        font-size: 2rem;
+
+
+    }
 
 `;
 
@@ -105,11 +153,32 @@ const StyledDataTitle2 = styled.p`
 
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     font-weight: bold;
 
     padding: 5px 0;
+
+    @media (max-width: 1600px) {
+
+        font-size: 1.4rem;
+
+
+    }
+
+    @media (max-width: 1000px) {
+
+        font-size: 1.6rem;
+
+
+    }
+
+    @media (max-width: 700px) {
+
+        font-size: 1.8rem;
+
+
+    }
 
 `;
 
@@ -165,6 +234,27 @@ const StyledButton = styled.button`
     &:focus {
 
         outline: none;
+    }
+
+    @media (max-width: 1600px) {
+
+        font-size: 1.4rem;
+
+
+    }
+
+    @media (max-width: 1000px) {
+
+        font-size: 1.6rem;
+
+
+    }
+
+    @media (max-width: 700px) {
+
+        font-size: 1.8rem;
+
+
     }
 
 `;

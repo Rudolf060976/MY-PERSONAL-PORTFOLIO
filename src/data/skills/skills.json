@@ -1,0 +1,147 @@
+[
+    {
+        "title": "BACK-END",
+        "skills": [
+            {
+                "name": "Node.js",
+                "image": "../images/NODE.png"
+            },
+            {
+                "name": "Express.js",
+                "image": "../images/EXPRESS.png"
+            },
+            {
+                "name": "Apollo Server",
+                "image": "../images/APOLLO-SERVER.png"
+            },
+            {
+                "name": "API Rest",
+                "image": "../images/API-REST.png"
+            },
+            {
+                "name": "GraphQL",
+                "image": "../images/GRAPHQL.png"
+            },
+            {
+                "name": "MongoDB",
+                "image": "../images/MONGODB.png"
+            },
+            {
+                "name": "Mongoose",
+                "image": "../images/MONGOOSE.png"
+            },
+            {
+                "name": "Passport.js",
+                "image": "../images/PASSPORT.png"
+            }
+        ]
+    },
+    {
+        "title": "FRONT-END",
+        "skills": [
+            {
+                "name": "HTML 5",
+                "image": "../images/HTML5.png"
+            },
+            {
+                "name": "CSS3",
+                "image": "../images/CSS3.png"
+            },
+            {
+                "name": "Javascript",
+                "image": "../images/JAVASCRIPT.png"
+            },
+            {
+                "name": "JSX",
+                "image": "../images/JSX.png"
+            },
+            {
+                "name": "React.js",
+                "image": "../images/REACT.png"
+            }
+        ]
+    },
+    {
+        "title": "REACT.JS",
+        "skills": [
+            {
+                "name": "React-Router",
+                "image": "../images/REACT-ROUTER.png"
+            },
+            {
+                "name": "Redux",
+                "image": "../images/REDUX.png"
+            },
+            {
+                "name": "Redux Actions",
+                "image": "../images/REDUX-ACTIONS.png"
+            },
+            {
+                "name": "Redux-Thunk",
+                "image": "../images/REDUX-THUNK.png"
+            },
+            {
+                "name": "Formik",
+                "image": "../images/FORMIK.png"
+            },
+            {
+                "name": "Apollo Client",
+                "image": "../images/APOLLO-CLIENT.png"
+            },
+            {
+                "name": "React-Bootstrap",
+                "image": "../images/REACT-BOOTSTRAP.png"
+            },
+            {
+                "name": "Gatsby.js",
+                "image": "../images/GATSBY.png"
+            },
+            {
+                "name": "React-Fontawesome",
+                "image": "../images/REACT-FONTAWESOME.png"
+            },
+            {
+                "name": "Styled-Components",
+                "image": "../images/STYLED-COMPONENTS.png"
+            }
+        ]
+    },
+    {
+        "title": "TOOLS",
+        "skills": [
+            {
+                "name": "Webpack",
+                "image": "../images/WEBPACK.png"
+            },
+            {
+                "name": "Babel",
+                "image": "../images/BABEL.png"
+            },
+            {
+                "name": "Git",
+                "image": "../images/GIT.png"
+            },
+            {
+                "name": "GitHub",
+                "image": "../images/GITHUB.png"
+            },
+            {
+                "name": "Eslint",
+                "image": "../images/ESLINT.png"
+            },
+            {
+                "name": "Visual Studio Code",
+                "image": "../images/VISUAL-STUDIO-CODE.png"
+            },
+            {
+                "name": "Heroku",
+                "image": "../images/HEROKU.png"
+            },
+            {
+                "name": "Netlify",
+                "image": "../images/NETLIFY.png"
+            }
+        ]
+    }
+
+]

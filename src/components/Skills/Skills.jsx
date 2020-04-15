@@ -1,17 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-
-import AboutContent from './AboutContent';
-
+import SkillsContent from './SkillsContent';
+import { Parallax } from 'react-scroll-parallax';
 
 const BackgroundSection = ({ className, children }) => {
 
     const data = useStaticQuery(graphql`
         query {
-            desktop: file(relativePath: { eq: "BACK2.jpeg" }) {
+            desktop: file(relativePath: { eq: "BACK12.webp" }) {
                 childImageSharp {
                     fluid(quality:90, maxWidth: 2560) {
                         ...GatsbyImageSharpFluid
@@ -24,7 +22,7 @@ const BackgroundSection = ({ className, children }) => {
     const imageData = data.desktop.childImageSharp.fluid;
 
     return (
-        <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#1D2F40'}>
+        <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#325A73'}>
             {children}
         </BackgroundImage>
     );
@@ -33,34 +31,42 @@ const BackgroundSection = ({ className, children }) => {
 const StyledBackgroundSection = styled(BackgroundSection)`
 
     width: 100%;
+
+    height: 130vh;
+
+    position: absolute;
+
     
-    padding: 50px 10px 100px 10px;
 
-    height: 80vh;
-
-    /* border-bottom: 1px solid ${props => props.theme.colorMainBlueGray}; */
-   
-   
 `;
 
-const StyledContainer = styled.section` /* TUVO QUE SER NECESARIO ESTE CONTAINER PORQUE SE VEIA EL BACKGROUND DE SKILLS DETRAS DEL BACKGROUND DE ESTA SECCION */
+const ParallaxImage = () => (
+    <Parallax className="custom-class" y={[-50, 50]} tagOuter="div">
+        <StyledBackgroundSection />
+    </Parallax>
+);
+
+
+const StyledContainer = styled.section`
 
     width: 100%;
 
-    height: 80vh;
+    height: 130vh;
+    
+    position: relative;
 
-    background-color: ${props => props.theme.colorMainBlueDark2};
+    z-index: -500;
+
 `;
 
 
-function About() {
+function Skills() {
     return (
         <StyledContainer>
-            <StyledBackgroundSection>
-                <AboutContent />
-            </StyledBackgroundSection>
-        </StyledContainer>        
+            <ParallaxImage />  
+            <SkillsContent />          
+        </StyledContainer>
     );
 }
 
-export default About;
+export default Skills;

@@ -1,18 +1,15 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-
-
 import Layout from "../components/Layout/layout"
 import PlaceholderImage from "../components/PlaceholderImage/PlaceholderImage"
 import SEO from "../components/seo"
-
 import theme from '../StyledComponents/theme';
 import { ThemeProvider } from 'styled-components';
-
 import '../FontAwesome/library';
-
 import About from "../components/About/About"
-
+import Skills from "../components/Skills/Skills"
+import { ParallaxProvider } from 'react-scroll-parallax';
+import Projects from "../components/Projects/Projects";
 
 
 const IndexPage = () => {
@@ -22,12 +19,16 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme} >      
-      <Layout>
-        <SEO title="Home" />      
-        <About />
-      </Layout>
-    </ThemeProvider>    
+    <ParallaxProvider>
+      <ThemeProvider theme={theme} >      
+        <Layout>
+          <SEO title="Home" />      
+          <About />
+          <Skills />
+          <Projects />
+        </Layout>
+      </ThemeProvider>    
+    </ParallaxProvider>    
   ); 
 
 };

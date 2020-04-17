@@ -32,7 +32,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     width: 100%;
 
-    height: 130vh;
+    height: 140vh;
 
     position: absolute;
 
@@ -51,7 +51,7 @@ const StyledContainer = styled.section`
 
     width: 100%;
 
-    height: 130vh;
+    height: 140vh;
     
     position: relative;
 

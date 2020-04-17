@@ -1,0 +1,98 @@
+[
+    {
+        "title": "My Professional Portfolio (this Website)",
+        "description": "My personal Portfolio where you can find the information about my career as Web Developer, and the way to contact me.",
+        "image": "../images/PORTFOLIO.jpg",
+        "tools": [
+            {
+                "name": "Gatsby.js (a React.js Library)."                
+            },
+            {
+                "name": "CSS3 / SASS / JSX."                
+            },
+            {
+                "name": "React-Fontawesome."
+            },
+            {
+                "name": "Styled Components."
+            },
+            {
+                "name": "Polished Library."
+            },
+            {
+                "name": "GraphQL to query local data (JSON)."
+            },
+            {
+                "name": "Netlify to Deploy."
+            }
+        ],
+        "pageUrl": "",
+        "githubUrl": ""
+    },
+    {
+        "title": "Restaurant Website & Delivery App",
+        "description": "A Single Page Application for a Hamburger Restaurant, where you can browse your favorite burgers, fries, milkshakes and salads. You also can place your food orders, after a fast registration. ",
+        "image": "../images/RESTAURANT.jpg",
+        "tools": [
+            {
+                "name": "Backend: Node, Express, Apollo Server, MongoDB, Mongoose."                
+            },            
+            {
+                "name": "JSON Web Token for Authentication."
+            },
+            {
+                "name": "CSS3 / SASS / JSX."                
+            },
+            {
+                "name": "React-Fontawesome."
+            },
+            {
+                "name": "Styled Components."
+            },
+            {
+                "name": "Polished Library."
+            },
+            {
+                "name": "Apollo Client & GraphQL to query & mutate the API."
+            },
+            {
+                "name": "Heroku to Deploy."
+            }
+        ],
+        "pageUrl": "",
+        "githubUrl": ""
+    },
+    {
+        "title": "BitZone Online Store",
+        "description": "A small ecommerce SPA where you can find and order Items.",
+        "image": "../images/BITZONE.jpg",
+        "tools": [
+            {
+                "name": "Backend: Node, Express, MongoDB, Mongoose, REST API"                
+            },            
+            {
+                "name": "Passport.js & JSON Web Token for Authentication."
+            },
+            {
+                "name": "CSS3 / SASS / JSX."                
+            },
+            {
+                "name": "Redux / Redux Actions / Redux Thunk"
+            },
+            {
+                "name": "Styled Components."
+            },
+            {
+                "name": "React-Bootstrap."
+            },
+            {
+                "name": "Fetch API / Axios."
+            },
+            {
+                "name": "Heroku to Deploy."
+            }
+        ],
+        "pageUrl": "",
+        "githubUrl": ""
+    }
+]

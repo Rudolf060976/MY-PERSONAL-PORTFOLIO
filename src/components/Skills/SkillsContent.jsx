@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const StyledContainer = styled.div`
 
-    position: absolute;
+    position: absolute; /* PARA UBICARLO SOBRE EL PARENT DIV QUE ESTA EN MOVIMIENTO */
 
     top: 0;
 

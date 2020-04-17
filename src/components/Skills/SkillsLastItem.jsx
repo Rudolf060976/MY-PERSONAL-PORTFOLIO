@@ -18,6 +18,15 @@ const StyledContainer = styled.span`
     
     height: 100px;
 
+    @media (max-width: 1250px) {
+
+
+        min-width: 120px;
+
+        margin: 15px 0;
+
+    }
+
     
 
 `;
@@ -36,12 +45,14 @@ const StyledTitle = styled.span`
 
     letter-spacing: 1px;
 
+    padding-top: 10px;
+
 
 `;
 
 const StyledImage = styled(Image)`
 
-
+    
 
 
 `;

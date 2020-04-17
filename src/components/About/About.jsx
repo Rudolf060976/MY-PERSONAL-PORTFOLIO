@@ -35,19 +35,17 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     width: 100%;
     
     padding: 50px 10px 100px 10px;
-
-    height: 80vh;
+    
 
     /* border-bottom: 1px solid ${props => props.theme.colorMainBlueGray}; */
-   
+  
    
 `;
 
 const StyledContainer = styled.section` /* TUVO QUE SER NECESARIO ESTE CONTAINER PORQUE SE VEIA EL BACKGROUND DE SKILLS DETRAS DEL BACKGROUND DE ESTA SECCION */
 
     width: 100%;
-
-    height: 80vh;
+   
 
     background-color: ${props => props.theme.colorMainBlueDark2};
 `;

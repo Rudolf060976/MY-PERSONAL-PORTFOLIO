@@ -32,10 +32,43 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     width: 100%;
 
-    height: 140vh;
+    height: 150vh;
+
+    min-height: 150vh;
 
     position: absolute;
 
+    @media (max-width: 1350px) {
+
+        height: 170vh;
+
+        min-height: 170vh;
+
+    }
+
+    @media (max-width: 865px) {
+
+        height: 190vh;
+
+        min-height: 190vh;
+
+    }   
+
+    @media (max-width: 700px) {
+
+        height: 210vh;
+
+        min-height: 210vh;
+
+    } 
+    
+    @media (max-width: 565px) {
+
+        height: 250vh;
+
+        min-height: 250vh;
+
+    }   
     
 
 `;
@@ -51,11 +84,37 @@ const StyledContainer = styled.section`
 
     width: 100%;
 
-    height: 140vh;
+    height: 150vh;
     
     position: relative;
 
     z-index: -500;
+
+    @media (max-width: 1350px) {
+
+        height: 170vh;
+
+    }
+
+    @media (max-width: 865px) {
+
+        height: 190vh;
+
+    }
+
+    @media (max-width: 700px) {
+
+        height: 210vh;
+
+       
+
+    }   
+
+    @media (max-width: 565px) {
+
+        height: 250vh;
+
+    }   
 
 `;
 

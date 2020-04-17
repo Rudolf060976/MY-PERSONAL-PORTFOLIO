@@ -82,10 +82,10 @@ function SkillsContent() {
     return (
         <StyledContainer>           
             <StyledTitle>- SKILLS -</StyledTitle>
-            <SkillsItem skillData={backEnd} top={'5rem'} left={'-60rem'} xArray={[-30,50]} />     
-            <SkillsItem skillData={frontEnd} top={'30rem'} left={'120rem'} xArray={[50,-55]} />  
-            <SkillsItem skillData={reactjs} top={'55rem'} left={'-60rem'} xArray={[-30,50]} />  
-            <SkillsItem skillData={tools} top={'80rem'} left={'120rem'} xArray={[50,-55]} />            
+            <SkillsItem skillData={backEnd} top={'75px'} left={'-60'} xArray={[-30,50]} side="L" itemID="1"/>     
+            <SkillsItem skillData={frontEnd} top={'410px'} left={'120'} xArray={[50,-55]} side="R" itemID="2"/>       
+            <SkillsItem skillData={reactjs} top={'745px'} left={'-60'} xArray={[-30,50]} side="L" itemID="3"/>       
+            <SkillsItem skillData={tools} top={'1080px'} left={'120'} xArray={[50,-55]} side="R" itemID="4"/>                  
         </StyledContainer>
     );
 }

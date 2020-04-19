@@ -90,6 +90,34 @@ const StyledContainer = styled.div`
 
     animation-timing-function:ease-out;
 
+     @media (max-width: 2200px) {
+
+        width: 90%;
+
+
+    }
+
+     @media (max-width: 1500px) {
+
+        width: 100%;
+
+
+    }
+
+     @media (max-width: 700px) {
+
+        padding: 45px 10px;
+
+
+    }
+
+     @media (max-width: 500px) {
+
+        padding: 45px 15px;
+
+
+    }
+
 `;
 
 const StyledTitle = styled.h4`
@@ -127,6 +155,16 @@ const StyledDescription = styled.h6`
 
     line-height: 2.2rem;
 
+
+    @media (max-width: 1600px) {
+
+        padding-top: 0;
+
+        margin-top: -10px;
+
+
+    }
+
 `;
 
 const StyledList = styled.ul`
@@ -140,6 +178,12 @@ const StyledList = styled.ul`
     letter-spacing: 1px;
 
     padding: 10px 0 10px 20px;
+
+     @media (max-width: 700px) {
+
+        font-size: 1.4rem;
+
+   }
 
 `;
 
@@ -249,6 +293,8 @@ const StyledLink = styled.a`
         cursor: pointer;
 
     }
+
+    
 
 `;
 

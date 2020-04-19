@@ -110,9 +110,28 @@ const StyledContainer = styled.div`
 
 const StyledImageContainer = styled.div`  /*  ESTA ES UNA PRUEBA */
 
-   width: 70%;
+   width: 80%;
    overflow: hidden;
    border-radius: 10px; 
+
+   @media (max-width: 700px) {
+
+        width: 70%;
+
+   }
+
+    @media (max-width: 580px) {
+
+        width: 80%;
+
+   }
+
+    @media (max-width: 400px) {
+
+        width: 90%;
+
+   }
+
    
 `;
 

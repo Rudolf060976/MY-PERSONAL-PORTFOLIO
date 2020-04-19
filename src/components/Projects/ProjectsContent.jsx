@@ -63,19 +63,13 @@ const StyledTitle = styled.h2`
      animation-duration: 1s;
 
      animation-fill-mode: forwards;
-     
-
-    @media (max-width: 500px) {
-
-        width: 300px;
-
-    }
+ 
 
 `;
 
 const StyledContentContainer = styled.div`
 
-    width: 100;
+    width: 100%;
 
 `;
 
@@ -98,6 +92,77 @@ const StyledGridContainer = styled.div`
     margin: 0 auto;
 
     padding: 40px 0;
+
+
+    @media (max-width: 2200px) {
+
+        width: 80%;
+
+
+    }
+
+     @media (max-width: 1300px) {
+
+        grid-template-rows: repeat(3, 46rem);
+
+
+    }
+
+     @media (max-width: 1200px) {
+
+        width: 90%;
+
+
+    }
+
+     @media (max-width: 950px) {
+
+        grid-template-rows: repeat(3, 50rem);
+
+
+    }
+
+     @media (max-width: 820px) {
+
+        grid-template-rows: repeat(3, 52rem);
+
+        width: 100%;
+
+    }
+
+     @media (max-width: 700px) {
+
+        width: 90%;
+
+        grid-template-areas:
+        "area1"
+        "area2"
+        "area4"
+        "area3"
+        "area5"
+        "area6";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 46rem);
+
+        gap: 30px 0;
+
+
+    }
+
+    @media (max-width: 500px) {
+
+        width: 100%;
+
+    }
+
+     @media (max-width: 370px) {
+
+        grid-template-rows: repeat(6, 50rem);
+
+    }
+
+   
 
 `;
 

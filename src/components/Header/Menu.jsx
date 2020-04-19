@@ -45,6 +45,12 @@ const StyledContainer = styled.nav`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 1100px) {
+
+        padding: 15px 0;
+
+    }
+
     @media (max-width: 600px) {
         position: relative;
         padding: 0;

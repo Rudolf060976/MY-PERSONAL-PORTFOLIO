@@ -1,8 +1,44 @@
 import React, { useRef, useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import ProjectImageItem from './ProjectImageItem';
 import ProjectDataItem from './ProjectDataItem';
+
+
+
+const animationTitle = keyframes`
+
+  from {
+   
+    color: ${props => props.theme.colorMainBlueGray};
+    transform: scale(1);
+    text-shadow: none;
+
+  }
+
+  75% {
+
+    color: white;
+
+    text-shadow: 0px 0px 10px white;
+
+    transform: scale(1.2);
+
+  }
+
+  to {
+
+      color: ${props => props.theme.colorMainBlueGray};
+
+      transform: scale(1);
+
+      text-shadow: none;
+
+  }
+
+
+`;
+
 
 
 
@@ -22,6 +58,12 @@ const StyledTitle = styled.h2`
 
     text-align: center;
 
+     animation-name: ${props => props.play ? animationTitle : 'none'};
+
+     animation-duration: 1s;
+
+     animation-fill-mode: forwards;
+     
 
     @media (max-width: 500px) {
 
@@ -134,7 +176,7 @@ function ProjectsContent() {
 
     return (
         <>
-        <StyledTitle>LATEST PROJECTS</StyledTitle>
+        <StyledTitle play={play}>LATEST PROJECTS</StyledTitle>
         <StyledContentContainer ref={containerElement}>
             <StyledGridContainer>
                 <ProjectImageItem gridArea={'area1'} image={portFolio.image.childImageSharp.fluid} play={play} />

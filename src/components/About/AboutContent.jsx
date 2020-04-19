@@ -9,73 +9,146 @@ import AboutCard from './AboutCard';
 import AboutContacts from './AboutContacts';
 
 
+const animationME = keyframes`
+
+  from {
+
+    transform: translate(-50px, -50%) scale(1);    
+  }
+
+  70% {
+
+    transform: translate(300%, -50%) scale(1);   
+
+
+  }
+
+  85%  {
+
+    transform: translate(300%, -50%) scale(1.3);   
+
+  }
+
+  to {
+
+    transform: translate(300%, -50%) scale(1); 
+
+  }
+
+`;
+
 const animationTitle = keyframes`
+
+  from {
+
+    opacity: 0;
+    color: ${props => props.theme.colorMainBlueGray};
+    
+    text-shadow: none;
+
+  }
+
+  75% {
+        
+    color: white;
+
+    text-shadow: 0px 0px 10px white;
+
+    
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    color: ${props => props.theme.colorMainBlueGray};
+
+    
+
+    text-shadow: none;
+
+  }
+
+
+`;
+
+
+const backAnimation = keyframes`
+
+    from {
+        
+        opacity: .5;
+        width: 0;
+        height: 0;
+
+    } 
+
+    60% {
+        opacity: .5;
+        width: 0;
+        height: 100%;
+    }
+
+    80% {
+
+        opacity: .5;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+
+`;
+
+const animationContent = keyframes`
 
     from {
 
-        transform: translateY(-600px);
         opacity: 0;
-        
-    }
-
-    15% {
-
-        transform: translateY(-500px);
-        opacity: .10;
-
-    }
-
-    25% {
-
-        transform: translateY(-400px);
-        opacity: .20;
-
-    }
-
-    50% {
-
-        transform: translateY(-300px);
-        opacity: .45;
-
-    }
-
-    75% {
-
-        transform: translateY(-150px);
-        opacity: .75;
 
     }
 
     to {
 
-        transform: translateY(0);
         opacity: 1;
 
     }
 
 `;
 
+const animationContentTitle = keyframes`
+
+    from {
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+
+        transform: translateY(0);
+
+    }
+
+
+`;
 
 const StyledContainer= styled.div`
 
     width: 100%;
-    
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
-    transform: translateY(-600px);
-
-    opacity: 0;
-
-    animation-name: ${props => props.play ? animationTitle : 'none'};
-
-    animation-duration: 1s;
-
-    animation-iteration-count: 1;
-
-    animation-fill-mode: forwards;
+      
+   
 
     @media (max-width: 850px ) {
 
@@ -91,26 +164,50 @@ const StyledContainer= styled.div`
 
 `;
 
+const StyledTitleContainer = styled.div`
 
-const StyledTitle = styled.h2`
+    position: relative;
 
     width: 450px;
 
-    color: ${props => props.theme.colorMainBlueGray};
-
-    font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
-
     padding: 40px 0;
 
-    text-align: center;
+    font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma; 
+    
+    font-size: 4.4rem;
 
-    @media (max-width: 500px) {
+    font-weight: bold;
+       
+    text-align: center;  
 
-        width: 300px;
+    letter-spacing: 2px;
 
+    color: ${props => props.theme.colorMainBlueGray};
+       
+     @media (max-width: 600px) {
+
+        width: 400px;
 
     }
-              
+
+`;
+
+
+const StyledTitle = styled.span`
+
+    opacity: 0;
+
+    transform: scaleX(1);
+    
+    animation-name: ${props => props.play ? animationTitle : 'none'};
+
+    animation-duration: 1.2s;
+
+    animation-fill-mode: forwards;
+
+    animation-delay: 1s;
+    
+    
 `;
 
 const StyledTitleSpan = styled.span`
@@ -118,6 +215,14 @@ const StyledTitleSpan = styled.span`
     display: inline-block;
 
     padding: 10px 15px;
+
+    position: absolute;
+    
+    top: 50%;
+
+    left: 0;
+
+    transform: translate(-50px,-50%);    
 
     /* background-color: ${props => props.theme.colorMainBlueClear1};
 
@@ -129,11 +234,151 @@ const StyledTitleSpan = styled.span`
 
     border-radius: 5px;
 
+    animation-name: ${props => props.play ? animationME : 'none'};
+
+    animation-duration: 1s;
+
+    animation-fill-mode: forwards;
+
+
+    @media (max-width: 2000px) {
+
+        left: 2rem;
+
+    }
+
+     @media (max-width: 1500px) {
+
+        left: 4rem;
+
+    }
+
+    @media (max-width: 1500px) {
+
+        left: 6rem;
+
+    }
+
+    @media (max-width: 800px) {
+
+        left: 8rem;
+
+    }
+
+     @media (max-width: 600px) {
+
+        left: 6rem;
+
+    }
+
+      @media (max-width: 450px) {
+
+        left: 8rem;
+
+    }
+    
+
+`;
+
+
+const StyledCenterContainer = styled.div`
+
+        width: 60%;
+
+        overflow: hidden;
+
+        position: relative;
+        
+
+        &::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            height: 0;
+
+            width: 0;
+        
+            background-color: ${props => rgba(props.theme.colorMainBlueGray,0.5)};
+
+            animation-name: ${props => props.play ? backAnimation : 'none'};
+
+            animation-duration: 2s;
+
+            animation-fill-mode: forwards;
+
+            animation-delay: 1s;
+        
+            border: 3px solid ${props => props.theme.colorMainBlueGray};
+
+        }
+
+
+    @media (max-width: 2100px ) {
+
+        width: 70%;
+    
+    }
+
+    @media (max-width: 1700px ) {
+
+        width: 80%;
+
+
+    }
+
+    @media (max-width: 1400px ) {
+
+        width: 90%;
+
+
+    }
+
+
+    @media (max-width: 1200px ) {
+
+        width: 80%;
+            
+    }
+
+    @media (max-width: 1000px ) {
+
+        width: 90%;
+
+    }
+
+    @media (max-width: 850px ) {
+
+        width: 100%;
+
+    }
+
+    @media (max-width: 750px ) {
+
+        width: 80%;
+   
+    }
+
+    @media (max-width: 600px ) {
+
+        width: 100%;
+
+    }
+
 `;
 
 const StyledCenter = styled.div`
 
-    width: 60%;
+    position: relative;
+
+    width: 100%;
+
+    opacity: 0;
 
     /* height: 70%; */
 
@@ -160,34 +405,25 @@ const StyledCenter = styled.div`
 
     gap: 10px 20px;
 
+    animation-name: ${props => props.play ? animationContent : 'none'};
+
+    animation-duration: .8s;
+
+    animation-fill-mode: forwards;
+
+    animation-delay: 2.4s;
+
 
     @media (max-width: 2100px ) {
 
-        width: 70%;
-
+       
         grid-template-rows: .3fr 1fr 1fr;
 
     }
 
-    @media (max-width: 1700px ) {
-
-        width: 80%;
-
-
-    }
-
-    @media (max-width: 1400px ) {
-
-        width: 90%;
-
-
-    }
-
-
+  
     @media (max-width: 1200px ) {
-
-        width: 80%;
-
+       
         grid-template-areas:
             "card   card    title   title  "
             "card   card    content content"
@@ -200,23 +436,10 @@ const StyledCenter = styled.div`
         padding: 30px 30px;
         
     }
-
-    @media (max-width: 1000px ) {
-
-        width: 90%;
-
-    }
-
-    @media (max-width: 850px ) {
-
-        width: 100%;
-
-    }
-
+  
     @media (max-width: 750px ) {
 
-        width: 80%;
-
+       
         grid-template-areas:
             "card   card"
             "card   card"
@@ -235,11 +458,6 @@ const StyledCenter = styled.div`
 
     }
 
-    @media (max-width: 600px ) {
-
-        width: 100%;
-
-    }
 
     @media (max-width: 450px ) {
 
@@ -249,7 +467,14 @@ const StyledCenter = styled.div`
 
     }
 
+    @media (max-width: 350px ) {
 
+        padding: 30px 5px;
+
+        grid-template-columns: 130px 130px;
+
+    }
+  
 
 `;
 
@@ -264,6 +489,16 @@ const StyledContentTitle = styled.h5`
     letter-spacing: 1px;
 
     font-size: 2.2rem;
+
+    transform: translateY(30px);
+
+    animation-name: ${props => props.play ? animationContentTitle : 'none'};
+
+    animation-duration: 1s;
+
+    animation-fill-mode: forwards;
+
+    animation-delay: 2.4s;
 
 
     @media (max-width: 450px ) {
@@ -289,6 +524,8 @@ const StyledContentDataContainer = styled.div`
 `;
 
 const StyledContentDataP = styled.p`
+
+    width: 100%;
 
     padding: 15px 10px 0 0;
 
@@ -357,7 +594,7 @@ function AboutContent() {
 
         
 
-        if (introPosition + 650 < screenHeight) {
+        if (introPosition < screenHeight) {
             //console.log('ESTOY AQUI');
             if(!play) setPlay(true);
 
@@ -405,20 +642,23 @@ function AboutContent() {
     };
 
     return (
-        <StyledContainer ref={containerElement} play={play} >
-             <StyledTitle>
-                - ABOUT  <StyledTitleSpan>ME</StyledTitleSpan> -
-            </StyledTitle>
-            <StyledCenter>
-                <AboutCard data={contactData}/>
-                <StyledContentTitle>{title}</StyledContentTitle>
-                <StyledContentDataContainer>
-                    <StyledContentDataP>{p1}</StyledContentDataP>
-                    <StyledContentDataP>{p2}</StyledContentDataP>
-                    <StyledContentDataP>{p3}</StyledContentDataP>
-                </StyledContentDataContainer>
-                <AboutContacts data={contactData} />
-            </StyledCenter>
+        <StyledContainer ref={containerElement}>
+            <StyledTitleContainer>
+                <StyledTitle play={play}>ABOUT</StyledTitle><StyledTitleSpan play={play}>ME</StyledTitleSpan>                
+            </StyledTitleContainer>            
+            <StyledCenterContainer play={play}>
+                <StyledCenter play={play}>
+                    <AboutCard data={contactData}/>
+                    <StyledContentTitle play={play}>{title}</StyledContentTitle>
+                    <StyledContentDataContainer>
+                        <StyledContentDataP>{p1}</StyledContentDataP>
+                        <StyledContentDataP>{p2}</StyledContentDataP>
+                        <StyledContentDataP>{p3}</StyledContentDataP>
+                    </StyledContentDataContainer>
+                    <AboutContacts data={contactData} />
+                </StyledCenter>
+            </StyledCenterContainer>
+            
         </StyledContainer>
     )
 }

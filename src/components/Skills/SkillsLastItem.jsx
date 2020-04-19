@@ -27,7 +27,14 @@ const StyledContainer = styled.span`
 
     }
 
-    
+     @media (max-width: 410px) {
+
+
+        min-width: 90px;
+
+        margin: 15px 0;
+
+    }
 
 `;
 
@@ -47,6 +54,18 @@ const StyledTitle = styled.span`
 
     padding-top: 10px;
 
+    
+     @media (max-width: 900px) {
+
+        font-size: 1.4rem;      
+
+    }
+
+     @media (max-width: 500px) {
+
+        font-size: 1.6rem;      
+
+    }
 
 `;
 

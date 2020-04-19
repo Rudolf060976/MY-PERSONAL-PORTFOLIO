@@ -1,7 +1,40 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useRef, useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import SkillsItem from './SkillsItem';
 import { graphql, useStaticQuery } from 'gatsby';
+
+const animationTitle = keyframes`
+
+  from {
+   
+    color: ${props => props.theme.colorMainBlueGray};
+    transform: scale(1);
+    text-shadow: none;
+
+  }
+
+  75% {
+
+    color: white;
+
+    text-shadow: 0px 0px 10px white;
+
+    transform: scale(1.2);
+
+  }
+
+  to {
+
+      color: ${props => props.theme.colorMainBlueGray};
+
+      transform: scale(1);
+
+      text-shadow: none;
+
+  }
+
+
+`;
 
 
 const StyledContainer = styled.div`
@@ -14,7 +47,13 @@ const StyledContainer = styled.div`
 
     width: 100%;
         
-    padding: 50px 10px 100px 10px;
+    padding: 80px 10px 100px 10px;
+
+      @media (max-width: 500px) {
+
+        padding: 50px 10px 100px 10px;
+
+    }
     
 `;
 
@@ -34,11 +73,19 @@ const StyledTitle = styled.h2`
     padding: 40px 0;
 
     text-align: center;
+
+     animation-name: ${props => props.play ? animationTitle : 'none'};
+
+     animation-duration: 1.5s;
+
+     animation-fill-mode: forwards;
    
 
     @media (max-width: 500px) {
 
         width: 300px;
+
+        padding: 20px 0;
 
     }
               
@@ -46,6 +93,45 @@ const StyledTitle = styled.h2`
   
 
 function SkillsContent() {
+
+    const containerElement = useRef(null);
+
+    const [play, setPlay] = useState(false);
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', handleScroll);
+
+    return () => {
+        
+        window.removeEventListener('scroll', handleScroll);
+
+    };
+    }, [])
+
+
+    const handleScroll = () => {
+     
+        
+        const introPosition = containerElement.current.getBoundingClientRect().top;
+        // console.log('introPosition: ', introPosition);
+
+        const screenHeight = window.innerHeight;
+
+        // console.log('screenHeight: ', screenHeight);
+
+        
+
+        if (introPosition < screenHeight) {
+            //console.log('ESTOY AQUI');
+            if(!play) setPlay(true);
+
+        } else if (introPosition > screenHeight) {
+            setPlay(false);
+        }
+
+    };
+
 
     const data = useStaticQuery(graphql`
     
@@ -80,8 +166,8 @@ function SkillsContent() {
 
 
     return (
-        <StyledContainer>           
-            <StyledTitle>- SKILLS -</StyledTitle>
+        <StyledContainer ref={containerElement}>           
+            <StyledTitle play={play}>- SKILLS -</StyledTitle>
             <SkillsItem skillData={backEnd} top={'75px'} left={'-60'} xArray={[-30,50]} side="L" itemID="1"/>     
             <SkillsItem skillData={frontEnd} top={'410px'} left={'120'} xArray={[50,-55]} side="R" itemID="2"/>       
             <SkillsItem skillData={reactjs} top={'745px'} left={'-60'} xArray={[-30,50]} side="L" itemID="3"/>       

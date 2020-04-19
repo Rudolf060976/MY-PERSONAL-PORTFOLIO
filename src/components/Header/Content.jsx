@@ -20,7 +20,7 @@ const azulNeon = keyframes`
 const StyledContainer = styled.div`
 
     width: 100%;    
-    
+       
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +39,9 @@ const StyledCenter = styled.div`
     
     padding: 10px 10px;
 
+    position: relative;
+
+   
    
     @media (max-width: 2200px) {
 
@@ -73,11 +76,22 @@ const StyledCenter = styled.div`
 
 `;
 
+const StyledTitlesContainer = styled.div`
+
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 80%;
 
 
-const StyledTitle = styled.h3`
+`;
+
+const StyledTitle = styled.h4`
+
+    width: 100%;
 
     padding: 20px 0;
+
     text-shadow: 0 0 20px ${props => props.theme.colorMainBlueClear2};
     letter-spacing: 2px;
 
@@ -91,55 +105,28 @@ const StyledTitle = styled.h3`
     animation-direction: alternate;
 
     @media (max-width: 800px) {
-
-        padding-left: 50px;
-
-    }
-
-    @media (max-width: 800px) {
-
-        padding-left: 50px;
+        
+        padding: 10px 0;
 
     }
 
-    @media (max-width: 520px) {
-
-        padding-left: 30px;
-
-    }
-
-    @media (max-width: 450px) {
-
-        padding-left: 15px;
-
-    }
-
+   
 `;
 
-const StyledComment = styled.h4`
+const StyledComment = styled.h5`
+
+    width: 100%;
 
     padding: 10px 0;
 
     color: ${props => props.theme.colorMainBlueGray};
+
     letter-spacing: 2px;
 
-    @media (max-width: 800px) {
+    line-height: 3.2rem;
 
-        padding-left: 50px;
-
-    }
-
-    @media (max-width: 520px) {
-
-        padding-left: 30px;
-
-    }
-
-    @media (max-width: 450px) {
-
-           padding-left: 15px;
-
-    }
+    font-size: 2rem;
+  
 
 `;
 
@@ -148,9 +135,11 @@ function Content({ siteMetadata }) {
     return (
         <StyledContainer>
             <StyledCenter>
-                <NameAnimated />                
+                <NameAnimated />  
+                <StyledTitlesContainer>
                     <StyledTitle>{ siteMetadata.subtitle }</StyledTitle>
-                    <StyledComment>{ siteMetadata.description }</StyledComment>                      
+                    <StyledComment>{ siteMetadata.description }</StyledComment>       
+                </StyledTitlesContainer>                           
             </StyledCenter>
         </StyledContainer>
     );

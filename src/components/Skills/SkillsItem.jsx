@@ -144,7 +144,7 @@ const StyledContainer = styled.div.attrs(props => ({
 
     }
 
-      @media (max-width: 565px) {
+    @media (max-width: 565px) {
 
         top: ${ props => {
 
@@ -165,6 +165,24 @@ const StyledContainer = styled.div.attrs(props => ({
     
         transform: ${props => (props.side === "R") ? 'translateX(-40rem)' : 'translateX(35rem)' };
 
+
+    }
+
+     @media (max-width: 410px) {
+
+        width: 90%;
+
+        transform: ${props => (props.side === "R") ? 'translateX(-51rem)' : 'translateX(35rem)' };
+
+    }
+
+     @media (max-width: 360px) {
+
+        width: 90%;
+
+        padding: 10px 0;
+
+        transform: ${props => (props.side === "R") ? 'translateX(-54rem)' : 'translateX(37rem)' };
 
     }
 

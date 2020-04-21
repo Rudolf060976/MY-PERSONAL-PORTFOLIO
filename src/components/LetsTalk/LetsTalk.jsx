@@ -65,7 +65,7 @@ const StyledContainer = styled.section`
 
 function LetsTalk() {
     return (
-        <StyledContainer>            
+        <StyledContainer id="contact-scroll-point">            
             <StyledBackgroundSection>                
                 <LetsTalkContent />
             </StyledBackgroundSection>                    

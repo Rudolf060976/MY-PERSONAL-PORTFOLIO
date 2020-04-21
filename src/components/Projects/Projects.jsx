@@ -20,7 +20,7 @@ const StyledContainer = styled.section`
 
 function Projects() {
     return (
-        <StyledContainer>
+        <StyledContainer id="projects-scroll-point">
             <ProjectsContent />
         </StyledContainer>
     );

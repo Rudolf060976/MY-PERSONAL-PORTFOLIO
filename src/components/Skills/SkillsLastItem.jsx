@@ -42,7 +42,7 @@ const StyledTitle = styled.span`
 
     font-family: Roboto, sans-serif, Verdana, Geneva, Tahoma;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     /* color: ${props => props.theme.colorMainBlueGray}; */
 
@@ -57,13 +57,13 @@ const StyledTitle = styled.span`
     
      @media (max-width: 900px) {
 
-        font-size: 1.4rem;      
+        font-size: 1.2rem;      
 
     }
 
      @media (max-width: 500px) {
 
-        font-size: 1.6rem;      
+        font-size: 1.4rem;      
 
     }
 

@@ -143,7 +143,7 @@ function SkillsContent() {
                         name
                         image {
                             childImageSharp {
-                                fixed(width:60) {
+                                fixed(width:50) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }

@@ -235,7 +235,7 @@ const StyledContainer = styled.section`
 
 function Skills() {
     return (
-        <StyledContainer>
+        <StyledContainer id="skills-scroll-point">
             <ParallaxImage />  
             <SkillsContent />          
         </StyledContainer>

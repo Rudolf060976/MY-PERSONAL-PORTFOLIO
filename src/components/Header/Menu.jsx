@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Link, Events, scrollSpy } from 'react-scroll';
+
+import { rgba } from 'polished';
 
 
 const animationOpen = keyframes`
@@ -34,9 +38,9 @@ const animationClose = keyframes`
 const StyledContainer = styled.nav`
 
     width: 100%;
-    padding: 30px 0;
+    padding: 15px 0;
 
-    background-color: ${props => props.theme.colorMainBlueDark2};
+    background-color: ${props => rgba(props.theme.colorMainBlueDark2,.8)};
 
     box-shadow: ${props => props.theme.whiteBoxShadow};
 
@@ -44,6 +48,10 @@ const StyledContainer = styled.nav`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+
+    position: fixed;
+
+    z-index: 5000;
 
     @media (max-width: 1100px) {
 
@@ -102,7 +110,7 @@ const StyledList = styled.ul`
 
     &:hover li a {
 
-        transform: scale(1.5);
+        transform: scale(1.3);
         opacity: .7;
         filter: blur(2px);
 
@@ -110,7 +118,7 @@ const StyledList = styled.ul`
 
     & li a:hover {
 
-        transform: scale(1.8);
+        transform: scale(1.5);
         opacity: 1;
         filter: blur(0);  
         cursor: pointer;
@@ -146,7 +154,7 @@ const StyledListItem = styled.li`
    
 `;
 
-const StyledLink = styled.a`
+const StyledLinkOut = styled.a`
 
     display: inline-block;
     width: 100%;
@@ -155,6 +163,55 @@ const StyledLink = styled.a`
     text-transform: uppercase;
     transition: all .3s linear;
     position: relative;
+
+    font-size: 1.4rem;
+    
+    @media (max-width: 600px) {
+
+        padding: 15px 10px;
+        text-align: center;
+
+    }
+    
+    &::before {
+
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: ${props => props.theme.colorMainBlueClear1};
+        transition: all .2s linear;
+        transform-origin: left;
+        transform: scaleX(0); 
+        z-index: -1;       
+    }
+
+    &:hover::before {
+        transform: scaleX(1); 
+
+        @media (max-width: 600px) {
+
+            transform: scaleX(0); 
+
+        }
+    }
+
+
+`;
+
+const StyledLink = styled(Link)`
+
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s linear;
+    position: relative;
+
+    font-size: 1.4rem;
     
     @media (max-width: 600px) {
 
@@ -224,6 +281,28 @@ function Menu({ openMenu, handleCloseMenu }) {
 
     const [closeMenu, setCloseMenu] = useState(false);
 
+    useEffect(() => {
+        
+        Events.scrollEvent.register('begin', function(to, element) {
+            console.log("begin", arguments);
+          });
+       
+        Events.scrollEvent.register('end', function(to, element) {
+            console.log("end", arguments);
+          });
+       
+        scrollSpy.update();
+
+
+        return () => {
+            
+            Events.scrollEvent.remove('begin');
+            Events.scrollEvent.remove('end');
+
+        }
+    });
+
+
     const handleCloseClick = () => {
 
         setCloseMenu(true);
@@ -246,22 +325,22 @@ function Menu({ openMenu, handleCloseMenu }) {
             </StyledCloseButton>
             <StyledList>
                 <StyledListItem>
-                    <StyledLink>Home</StyledLink>
+                    <StyledLink to="masthead" smooth={true} duration={600}>Home</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink>About Me</StyledLink>
+                    <StyledLink to="about-scroll-point" smooth={true} duration={600}>About Me</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink>Skills</StyledLink>
+                    <StyledLink to="skills-scroll-point" smooth={true} duration={700}>Skills</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink>Projects</StyledLink>
+                    <StyledLink to="projects-scroll-point" smooth={true} duration={900}>Projects</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink>Contact</StyledLink>
+                    <StyledLink to="contact-scroll-point" smooth={true} duration={1000}>Contact</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink>Blog</StyledLink>
+                    <StyledLinkOut>Blog</StyledLinkOut>
                 </StyledListItem>                
             </StyledList>      
         </StyledContainer>

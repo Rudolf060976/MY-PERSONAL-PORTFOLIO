@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectsContent from './ProjectsContent';
 
+import { rgba } from 'polished';
+
 
 
 const StyledContainer = styled.section`
@@ -10,7 +12,9 @@ const StyledContainer = styled.section`
    
     background-color: ${props => props.theme.colorMainBlueDark1};
 
-    padding: 50px 10px 50px 10px;
+    padding: 50px 10px 300px 10px;   
+
+    border-bottom: 1px solid ${props => rgba(props.theme.colorMainBlueGray, .5)};
    
 `;
 

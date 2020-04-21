@@ -10,6 +10,7 @@ import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Projects from "../components/Projects/Projects";
+import LetsTalk from "../components/LetsTalk/LetsTalk"
 
 
 const IndexPage = () => {
@@ -26,6 +27,7 @@ const IndexPage = () => {
           <About />
           <Skills />
           <Projects />
+          <LetsTalk />
         </Layout>
       </ThemeProvider>    
     </ParallaxProvider>    

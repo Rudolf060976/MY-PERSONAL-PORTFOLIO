@@ -37,6 +37,8 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     min-height: 140vh; 
 
     position: absolute;
+
+    z-index: -5000;
   
 
     @media (max-height: 1200px) {
@@ -221,40 +223,13 @@ const ParallaxImage = () => (
 
 const StyledContainer = styled.section`
 
-    width: 100%;
-
-    /* height: 150vh; */
+    width: 100%;  
     
     position: relative;
 
-    z-index: -500;
-
-    /* @media (max-width: 1350px) {
-
-        height: 170vh;
-
-    }
-
-    @media (max-width: 865px) {
-
-        height: 190vh;
-
-    }
-
-    @media (max-width: 700px) {
-
-        height: 210vh;
-
-       
-
-    }   
-
-    @media (max-width: 565px) {
-
-        height: 250vh;
-
-    }  */ 
-
+    z-index: -5000;
+    
+    
 `;
 
 

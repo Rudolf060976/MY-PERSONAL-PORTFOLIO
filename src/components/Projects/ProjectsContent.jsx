@@ -56,8 +56,7 @@ const StyledTitle = styled.h2`
 
     padding: 40px 0;
 
-    text-align: center;
-
+    
      animation-name: ${props => props.play ? animationTitle : 'none'};
 
      animation-duration: 1s;

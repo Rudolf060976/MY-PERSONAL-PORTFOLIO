@@ -29,7 +29,7 @@ const animationClose = keyframes`
     }
 
     to {
-        transform: translateY(-260px);
+        transform: translateY(-280px);
     }
 
 `;
@@ -64,7 +64,7 @@ const StyledContainer = styled.nav`
         padding: 0;
         z-index: 1000;
         
-        transform: translateY(-260px);     
+        transform: translateY(-280px);     
         animation-name: ${props => props.openMenu ? animationOpen : ( props.closeMenu ? animationClose : null ) };
         animation-duration: .5s; 
         animation-fill-mode: forwards;   
@@ -114,6 +114,12 @@ const StyledList = styled.ul`
         opacity: .7;
         filter: blur(2px);
 
+         @media (max-width: 600px) {
+
+            transform: scale(1.2);           
+
+        }
+
     }
 
     & li a:hover {
@@ -122,7 +128,13 @@ const StyledList = styled.ul`
         opacity: 1;
         filter: blur(0);  
         cursor: pointer;
-        color: white;   
+        color: white;  
+
+        @media (max-width: 600px) {
+
+            transform: scale(1.3);           
+
+        } 
       
     }
 
@@ -168,8 +180,9 @@ const StyledLinkOut = styled.a`
     
     @media (max-width: 600px) {
 
-        padding: 15px 10px;
+        padding: 10px 10px;
         text-align: center;
+        font-size: 2rem;
 
     }
     
@@ -217,6 +230,7 @@ const StyledLink = styled(Link)`
 
         padding: 15px 10px;
         text-align: center;
+        font-size: 2rem;
 
     }
     
@@ -327,22 +341,22 @@ function Menu({ openMenu, handleCloseMenu }) {
             </StyledCloseButton>
             <StyledList>
                 <StyledListItem>
-                    <StyledLink to="masthead" smooth={true} duration={600}>Home</StyledLink>
+                    <StyledLink to="masthead" smooth={true} duration={600} onClick={(e) => handleCloseClick()}>Home</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="about-scroll-point" smooth={true} duration={600}>About Me</StyledLink>
+                    <StyledLink to="about-scroll-point" smooth={true} duration={600} onClick={(e) => handleCloseClick()}>About Me</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="skills-scroll-point" smooth={true} duration={700}>Skills</StyledLink>
+                    <StyledLink to="skills-scroll-point" smooth={true} duration={700} onClick={(e) => handleCloseClick()}>Skills</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="projects-scroll-point" smooth={true} duration={900}>Projects</StyledLink>
+                    <StyledLink to="projects-scroll-point" smooth={true} duration={900} onClick={(e) => handleCloseClick()}>Projects</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="contact-scroll-point" smooth={true} duration={1000}>Contact</StyledLink>
+                    <StyledLink to="contact-scroll-point" smooth={true} duration={1000} onClick={(e) => handleCloseClick()}>Contact</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLinkOut>Blog</StyledLinkOut>
+                    <StyledLinkOut onClick={(e) => handleCloseClick()}>Blog</StyledLinkOut>
                 </StyledListItem>                
             </StyledList>      
         </StyledContainer>

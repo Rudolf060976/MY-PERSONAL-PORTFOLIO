@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
 
     width: 100%;
 
-    padding: 250px 0;
+    padding: 400px 0 0 0;
 
 `;
 
@@ -84,7 +84,7 @@ function GoHome() {
     return (
         <StyledContainer>
             <StyledCenter>
-                <StyledLink to="masthead" smooth={true} duration={600}>GO HOME</StyledLink>
+                <StyledLink to="masthead" smooth={true} duration={900}>GO HOME</StyledLink>
             </StyledCenter>
         </StyledContainer>
     );

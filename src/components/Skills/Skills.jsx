@@ -42,9 +42,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   
 /* RECUERDEN QUE CUANDO SE USA MAX-WIDTH LOS VALORES DEBEN SER DESCENDENTES, Y CON MIN-WIDTH ASCENDENTES */
 
-
-
-   
+     
 
      @media (max-width: 1000px) and (max-height: 700px) {
 
@@ -153,6 +151,14 @@ const StyledBackgroundSection = styled(BackgroundSection)`
         height: 150vh;
 
         min-height: 150vh; 
+
+    }
+
+     @media (min-width: 1000px) and (min-height: 1800px)  {
+
+        height: 110vh;
+
+        min-height: 110vh; 
 
     }
 

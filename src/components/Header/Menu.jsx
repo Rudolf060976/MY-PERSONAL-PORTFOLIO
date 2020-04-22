@@ -344,16 +344,16 @@ function Menu({ openMenu, handleCloseMenu }) {
                     <StyledLink to="masthead" smooth={true} duration={600} onClick={(e) => handleCloseClick()}>Home</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="about-scroll-point" smooth={true} duration={600} onClick={(e) => handleCloseClick()}>About Me</StyledLink>
+                    <StyledLink to="about-scroll-point" smooth={true} duration={700} onClick={(e) => handleCloseClick()}>About Me</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="skills-scroll-point" smooth={true} duration={700} onClick={(e) => handleCloseClick()}>Skills</StyledLink>
+                    <StyledLink to="skills-scroll-point" smooth={true} duration={800} onClick={(e) => handleCloseClick()}>Skills</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="projects-scroll-point" smooth={true} duration={900} onClick={(e) => handleCloseClick()}>Projects</StyledLink>
+                    <StyledLink to="projects-scroll-point" smooth={true} duration={1000} onClick={(e) => handleCloseClick()}>Projects</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLink to="contact-scroll-point" smooth={true} duration={1000} onClick={(e) => handleCloseClick()}>Contact</StyledLink>
+                    <StyledLink to="contact-scroll-point" smooth={true} duration={1200} onClick={(e) => handleCloseClick()}>Contact</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
                     <StyledLinkOut onClick={(e) => handleCloseClick()}>Blog</StyledLinkOut>

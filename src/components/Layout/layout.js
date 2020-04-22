@@ -11,6 +11,8 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../../StyledComponents/theme';
 
 import "./layout.scss"
+import Footer from "../Footer/Footer";
+
 
 const Layout = ({ children }) => {
   
@@ -20,9 +22,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme} >      
       <div className="main-layout-body">
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built by Rafael E. Urbina N.            
-        </footer>
+        <Footer />
       </div>
       </ThemeProvider>    
     </>

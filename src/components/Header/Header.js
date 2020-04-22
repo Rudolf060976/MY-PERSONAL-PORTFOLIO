@@ -46,10 +46,7 @@ const Header = ({ siteMetadata }) => {
           <li></li>
           <li></li>
           <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li></li>               
         </ul>  
       </div>  
     </header>

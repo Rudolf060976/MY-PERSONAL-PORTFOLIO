@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-    query SiteTitleQueryIndex {
+    query SiteTitleQueryIndexgat {
       site {
         siteMetadata {
           title

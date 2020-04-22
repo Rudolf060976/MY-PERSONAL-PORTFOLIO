@@ -80,11 +80,8 @@ const StyledTitle = styled.h2`
 
      animation-fill-mode: forwards;
    
-
     @media (max-width: 500px) {
-
-        width: 300px;
-
+        
         padding: 20px 0;
 
     }
@@ -168,10 +165,10 @@ function SkillsContent() {
     return (
         <StyledContainer ref={containerElement}>           
             <StyledTitle play={play}>- SKILLS -</StyledTitle>
-            <SkillsItem skillData={backEnd} top={'75px'} left={'-60'} xArray={[-30,50]} side="L" itemID="1"/>     
-            <SkillsItem skillData={frontEnd} top={'410px'} left={'120'} xArray={[50,-55]} side="R" itemID="2"/>       
-            <SkillsItem skillData={reactjs} top={'745px'} left={'-60'} xArray={[-30,50]} side="L" itemID="3"/>       
-            <SkillsItem skillData={tools} top={'1080px'} left={'120'} xArray={[50,-55]} side="R" itemID="4"/>                  
+            <SkillsItem skillData={backEnd} topInPx={'300'} leftInPercentage={14} side="L" itemID="1" play={play} delayInSeconds={0}/>     
+            <SkillsItem skillData={frontEnd} topInPx={'650'} leftInPercentage={14} side="R" itemID="2" play={play} delayInSeconds={1}/>     
+            <SkillsItem skillData={reactjs} topInPx={'1000'} leftInPercentage={14} side="L" itemID="3" play={play} delayInSeconds={2}/>       
+            <SkillsItem skillData={tools} topInPx={'1350'} leftInPercentage={14} side="R" itemID="4" play={play} delayInSeconds={3}/>                  
         </StyledContainer>
     );
 }

@@ -63,7 +63,7 @@ const StyledContainer = styled.nav`
         position: relative;
         padding: 0;
         z-index: 1000;
-        
+        background-color: ${props => rgba(props.theme.colorMainBlueDark2,.9)};
         transform: translateY(-280px);     
         animation-name: ${props => props.openMenu ? animationOpen : ( props.closeMenu ? animationClose : null ) };
         animation-duration: .5s; 

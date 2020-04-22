@@ -1,48 +1,97 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
 import { lighten, rgba } from 'polished';
 import SkillsLastItem from './SkillsLastItem';
+
+
+const moveAnimation = keyframes`
+    from {
+
+        transform: translateX(-150%);
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+
+`;
+
+const animationTitle = keyframes`
+
+  from {  
+    color: ${props => props.theme.colorMainBlueGray};    
+    text-shadow: none;
+  }
+
+  75% {
+    color: white;
+    text-shadow: 0px 0px 10px white;
+  }
+
+  to {
+      color: ${props => props.theme.colorMainBlueGray};
+      text-shadow: none;
+  }
+
+
+`;
 
 
 const StyledContainer = styled.div.attrs(props => ({
 
     leftDecrement: (value) => {
 
-            return (props.left - value) + 'rem';
+            return (props.leftInPercentage - value) + '%';
     },
     leftIncrement: (value) => {
-            return (props.left + value) + 'rem';
+            return (props.leftInPercentage + value) + '%';
     },
     topIncrement: (value) => {
-        return (props.top + value) + 'rem';
+        return (props.top + value) + 'px';
     },
     topDecrement: (value) => {
-        return (props.top - value) + 'rem';
+        return (props.top - value) + 'px';
     }
 
 }))`
 
     width: 70%;
 
-    background-color: ${props => rgba(props.theme.colorMainBlueClear1, 0.8)};
-
-    padding: 10px 10px;
-   
-
     position: absolute;
 
-    top: ${props => props.top};
+    top: ${props => props.topInPx}px;
 
-    left: ${props => props.left + 'rem'};
+    left: ${props => props.leftInPercentage}%;
+
+    background-color: ${props => rgba(props.theme.colorMainBlueClear1, 0.8)};
+
+    padding: 10px 10px;   
 
     border-radius: 5px;
+
+    transform: translateX(-150%);
+
+    opacity: 0;
+
+    animation-name: ${props => props.play ? moveAnimation : 'none'};
+
+    animation-duration: 2s;
+
+    animation-fill-mode: forwards;
+
+    animation-delay: ${props => props.delayInSeconds}s;
 
     @media (max-width: 1500px) {
 
         width: 80%;
 
-        left: ${props => (props.side === "R") ? props.leftDecrement(18) : props.left + 'rem'};
+        left: ${props => props.leftDecrement(5) };
 
     }
 
@@ -50,154 +99,221 @@ const StyledContainer = styled.div.attrs(props => ({
 
         width: 90%;
 
-        left: ${props => (props.side === "R") ? props.leftDecrement(37) : props.left + 'rem'};
+        left: ${props => props.leftDecrement(10)};
 
     }
 
     @media (max-width: 1250px) {
 
         width: 80%;
+       
+        top: ${ props => {
 
-        left: ${props => (props.side === "R") ? props.leftDecrement(35) : props.leftDecrement(0)};
+            switch (props.itemID) {
+                case "1":
+                    return "300px"; 
+                               
+                case "2":
+                    return "750px"
+
+                case "3":
+                    return "1070px"
+                case "4":
+                    return "1520px"
+            }
+
+        }};  
+        
+        left: ${props => props.leftIncrement(-5)};
+
+    }
+ 
+
+    @media (max-width: 900px) {       
+
+        top: ${ props => {
+
+        switch (props.itemID) {
+            case "1":
+                return "270px"; 
+                   
+            case "2":
+                return "720px"
+
+            case "3":
+                return "1040px"
+            case "4":
+                return "1490px"
+        }
+
+        }};       
+
+    }
+
+
+    @media (max-width: 830px) {
 
         top: ${ props => {
 
             switch (props.itemID) {
                 case "1":
-                    return "75px"; 
-                               
+                    return "270px"; 
+                   
                 case "2":
-                    return "510px"
+                    return "720px"
 
                 case "3":
-                    return "820px"
+                    return "1170px"
                 case "4":
-                    return "1250px"
+                    return "1750px"
             }
 
-
         }};       
 
     }
 
-    @media (max-width: 1150px) {
 
-        transform: ${props => (props.side === "L") ? 'translateX(15rem)' : 'translateX(-10rem)' };
-
-
-    }
-
-    @media (max-width: 865px) {
-
-        transform: ${props => (props.side === "L") ? 'translateX(20rem)' : 'translateX(-15rem)' };
+    @media (max-width: 680px) {
 
         top: ${ props => {
 
-        switch (props.itemID) {
-            case "1":
-                return "75px"; 
+            switch (props.itemID) {
+                case "1":
+                    return "270px"; 
                    
-            case "2":
-                return "510px"
+                case "2":
+                    return "830px"
 
-            case "3":
-                return "950px"
-            case "4":
-                return "1520px"
-        }
+                case "3":
+                    return "1260px"
+                case "4":
+                    return "1950px"
+            }
 
-        }};       
-
-    }
-
-    @media (max-width: 750px) {
-
-        transform: ${props => (props.side === "R") ? 'translateX(-25rem)' : 'translateX(20rem)' };
+        }};  
 
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 530px) {
 
         top: ${ props => {
 
-        switch (props.itemID) {
-            case "1":
-                return "75px"; 
-           
-            case "2":
-                return "620px"
+            switch (props.itemID) {
+                case "1":
+                    return "230px"; 
+                   
+                case "2":
+                    return "900px"
 
-            case "3":
-                return "1040px"
-            case "4":
-                return "1720px"
-        }
+                case "3":
+                    return "1440px"
+                case "4":
+                    return "2240px"
+            }
 
-    }};       
+        }};  
 
-
-    }
-
-    @media (max-width: 650px) {
-
-        transform: ${props => (props.side === "R") ? 'translateX(-35rem)' : 'translateX(30rem)' };
 
     }
-
-    @media (max-width: 565px) {
-
-        top: ${ props => {
-
-        switch (props.itemID) {
-            case "1":
-                return "75px"; 
-           
-            case "2":
-                return "750px"
-
-            case "3":
-                return "1300px"
-            case "4":
-                return "2100px"
-        }
-
-    }};  
     
-        transform: ${props => (props.side === "R") ? 'translateX(-40rem)' : 'translateX(35rem)' };
+     @media (max-width: 500px) {
+
+        top: ${ props => {
+
+            switch (props.itemID) {
+                case "1":
+                    return "160px"; 
+                   
+                case "2":
+                    return "830px"
+
+                case "3":
+                    return "1370px"
+                case "4":
+                    return "2170px"
+            }
+
+        }};  
 
 
     }
+    
 
      @media (max-width: 410px) {
 
         width: 90%;
 
-        transform: ${props => (props.side === "R") ? 'translateX(-51rem)' : 'translateX(35rem)' };
+        left: ${props => props.leftIncrement(-9)};
+
+        top: ${ props => {
+
+            switch (props.itemID) {
+                case "1":
+                    return "160px"; 
+                   
+                case "2":
+                    return "700px"
+
+                case "3":
+                    return "1110px"
+                case "4":
+                    return "1780px"
+            }
+
+        }};  
+
 
     }
 
-     @media (max-width: 360px) {
-
-        width: 90%;
+     @media (max-width: 370px) {
 
         padding: 10px 0;
 
-        transform: ${props => (props.side === "R") ? 'translateX(-54rem)' : 'translateX(37rem)' };
+         top: ${ props => {
+
+            switch (props.itemID) {
+                case "1":
+                    return "150px"; 
+                   
+                case "2":
+                    return "670px";
+
+                case "3":
+                    return "1060px";
+                case "4":
+                    return "1710px";
+            }
+
+        }};  
 
     }
 
-  
+     @media (max-width: 350px) {
+
+        padding: 10px 0;
+
+         top: ${ props => {
+
+            switch (props.itemID) {
+                case "1":
+                    return "160px"; 
+                   
+                case "2":
+                    return "800px"
+
+                case "3":
+                    return "1310px"
+                case "4":
+                    return "2080px"
+            }
+
+        }};  
+
+    }
 
   
 `;
 
-const ParallaxContainer = ({ children, top, left, xArray, side, itemID }) => (
-    <Parallax x={xArray} tagOuter="div">
-        <StyledContainer top={top} left={left} side={side} itemID={itemID}>
-            {children}
-        </StyledContainer>        
-    </Parallax>
-);
 
 const StyledTitle = styled.h2`
 
@@ -210,6 +326,14 @@ const StyledTitle = styled.h2`
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
 
     font-size: 3.4rem;
+
+    animation-name: ${props => props.play ? animationTitle : 'none'};
+
+    animation-duration: 1s;
+
+    animation-fill-mode: forwards;
+
+    animation-delay: ${props => (props.delayInSeconds + 1.5)}s;
 
 `;
 
@@ -262,19 +386,19 @@ const output = (dataArray) => {
 };
 
 
-function SkillsItem({ skillData, top, left, xArray, side, itemID }) {
+function SkillsItem({ skillData, topInPx, leftInPercentage, side, itemID, play, delayInSeconds }) {
 
     const skillsArray = skillData.skills;
 
     
     return (           
-        <ParallaxContainer top={top} left={left} xArray={xArray} side={side} itemID={itemID}>                
-            <StyledTitle>{skillData.title}</StyledTitle>
+        <StyledContainer topInPx={topInPx} leftInPercentage={leftInPercentage} side={side} itemID={itemID} play={play} delayInSeconds={delayInSeconds}>                
+            <StyledTitle play={play} delayInSeconds={delayInSeconds}>{skillData.title}</StyledTitle>
             <StyledSeparator />
             <StyledSkillsList>
                 { output(skillsArray) }
             </StyledSkillsList>            
-        </ParallaxContainer>
+        </StyledContainer>
     );
 }
 

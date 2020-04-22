@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import image from '../../images/PHONE-IMAGE-PNG.png';
 import LetsTalkContentDetails from './LetsTalkContentDetails';
+import GoHome from './GoHome';
 
 
 
@@ -348,7 +349,8 @@ function LetsTalkContent() {
                 <StyledTitleRigth play={play}>TALK -</StyledTitleRigth>                
                 <StyledPhoneIcon play={play} src={image} onMouseEnter={(e) => handleMouseHooverPhoneIcon(true)} onMouseLeave={(e) => handleMouseHooverPhoneIcon(false)} />
             </StyledTitleContainer>
-            <LetsTalkContentDetails play={play} enphasis={enphasis} />            
+            <LetsTalkContentDetails play={play} enphasis={enphasis} /> 
+            <GoHome />
         </>
     );
 }

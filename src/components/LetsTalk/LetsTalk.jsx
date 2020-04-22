@@ -38,9 +38,9 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     height: 150rem; 
 
-    @media (max-width: 400px) {
+    @media (max-width: 510px) {
 
-        height: 200rem; 
+        height: 250rem; 
 
     }
 
@@ -55,9 +55,9 @@ const StyledContainer = styled.section`
 
     height: 150rem;
 
-    @media (max-width: 400px) {
+    @media (max-width: 510px) {
 
-        height: 200rem; 
+        height: 250rem; 
 
     }
            

@@ -1,38 +1,49 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout/layout"
-import PlaceholderImage from "../components/PlaceholderImage/PlaceholderImage"
 import SEO from "../components/seo"
-import theme from '../StyledComponents/theme';
-import { ThemeProvider } from 'styled-components';
 import '../FontAwesome/library';
 import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Projects from "../components/Projects/Projects";
 import LetsTalk from "../components/LetsTalk/LetsTalk"
+import Header from '../components/Header/Header';
 
-
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
 
   useEffect(() => {
     window.scrollTo(0,0);
   }, []);
+ 
 
   return (
-    <ParallaxProvider>
-      <ThemeProvider theme={theme} >      
+    <ParallaxProvider>          
         <Layout>
-          <SEO title="Home" />      
+          <SEO title="Home" />  
+          <Header siteMetadata={data.site.siteMetadata} />    
           <About />
           <Skills />
           <Projects />
           <LetsTalk />
-        </Layout>
-      </ThemeProvider>    
+        </Layout>     
     </ParallaxProvider>    
   ); 
 
 };
 
-export default IndexPage
+export const query = graphql`
+    query SiteTitleQueryIndex {
+      site {
+        siteMetadata {
+          title
+          subtitle
+          description
+          author
+        }
+      }
+    }
+  `;
+
+
+export default IndexPage;

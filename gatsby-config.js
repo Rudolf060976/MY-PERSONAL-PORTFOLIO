@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `RAFAEL E. URBINA`,
     subtitle: `Full Stack Web Developer`,
-    description: `Working & Learning 12 hours a day to Build Great Things`,
+    description: `The Web never stops, so why would I have to?`,
     author: `rafaelurbinan@hotmail.com`,
   },
   plugins: [

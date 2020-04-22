@@ -98,8 +98,7 @@ const StyledName = styled.h1`
 const StyledLetter = styled.span`
 
     display: inline-block;
-    opacity: 0;
-   
+    opacity: 0;    
     animation-name: ${animate};
     animation-duration: 1s;   
     animation-fill-mode: forwards;
@@ -110,7 +109,7 @@ const StyledLetter = styled.span`
     
     &:nth-child(1) {
 
-        animation-delay: 0s;
+        animation-delay: .2s;
 
     }
 
@@ -191,6 +190,7 @@ const StyledLetter = styled.span`
 
 
 function NameAnimated() {
+
     return (
         <StyledContainer>
             <StyledVideo src={smokeVideo} autoPlay muted /> 

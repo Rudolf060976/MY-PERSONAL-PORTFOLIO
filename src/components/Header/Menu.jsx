@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -251,7 +251,7 @@ const StyledLink = styled(Link)`
 const StyledCloseButton = styled.span`
 
     position: absolute;
-    left: 10px;
+    right: 10px;
     top: 10px;
     display: none;
     color: $Main-Blue-Gray;
@@ -281,6 +281,8 @@ function Menu({ openMenu, handleCloseMenu }) {
 
     const [closeMenu, setCloseMenu] = useState(false);
 
+    const outerDiv = useRef(); // LO USAREMOS PARA DETECTAR CLICK FUERA DEL CONTENEDOR Y CERRAR EL MODAL
+
     useEffect(() => {
         
         Events.scrollEvent.register('begin', function(to, element) {
@@ -300,7 +302,7 @@ function Menu({ openMenu, handleCloseMenu }) {
             Events.scrollEvent.remove('end');
 
         }
-    });
+    },[]);
 
 
     const handleCloseClick = () => {
@@ -317,7 +319,7 @@ function Menu({ openMenu, handleCloseMenu }) {
 
     };
 
-
+    
     return (
         <StyledContainer openMenu={openMenu} closeMenu={closeMenu}>
             <StyledCloseButton onClick={(e) => handleCloseClick()}>

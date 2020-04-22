@@ -303,6 +303,8 @@ const StyledCenterContainer = styled.div`
             height: 0;
 
             width: 0;
+
+            opacity: 0;
         
             background-color: ${props => rgba(props.theme.colorMainBlueGray,0.5)};
 

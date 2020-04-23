@@ -259,6 +259,13 @@ const StyledButton = styled.button`
 
 `;
 
+const StyledProjectLink = styled.a`
+
+    
+
+
+`;
+
 
 const StyledLink = styled.a`
 
@@ -316,8 +323,10 @@ function ProjectDataItem({ gridArea, data, animDelay, play, buttonsDelay }) {
                 { listData }
             </StyledList>            
             <StyledButtonsContainer>
-                <StyledButton buttonsDelay={buttonsDelay} play={play}>Visit Project</StyledButton>
-                <StyledLink buttonsDelay={buttonsDelay} play={play}>GitHub Project</StyledLink>
+                <StyledProjectLink href={data.pageUrl} target="_blank">
+                    <StyledButton buttonsDelay={buttonsDelay} play={play}>Visit Project</StyledButton>
+                </StyledProjectLink>                
+                <StyledLink href={data.githubUrl} target="_blank" buttonsDelay={buttonsDelay} play={play}>GitHub Project</StyledLink>
             </StyledButtonsContainer>
         </StyledContainer>
     );

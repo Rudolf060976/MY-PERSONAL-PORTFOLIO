@@ -154,7 +154,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     }
 
-     @media (min-width: 950px) and (min-height: 1700px)  {
+     @media (min-width: 950px) and (min-height: 1600px)  {
 
         height: 180vh;
 

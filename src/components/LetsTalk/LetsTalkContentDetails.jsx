@@ -190,8 +190,45 @@ const StyledEmail = styled.a`
     &:hover {
 
         color: ${props => props.theme.colorMainBlueClear1};
+        text-decoration: none;
 
     }
+
+`;
+
+const StyledDownloadLinkContainer = styled.p`
+
+    text-align: center;
+    color: ${props => props.theme.colorMainBlueGray};
+    font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
+    font-size: 1.8rem;
+    padding: 30px 0;
+    letter-spacing: 2px;
+
+    @media (max-width: 540px) {
+        line-height: 3.4rem;
+    }
+
+`;
+
+
+const StyledDownloadLink = styled.a`
+
+    text-decoration: underline;
+
+    color: ${props => props.theme.colorMainBlueClear2};
+
+    transition: all .3s linear;
+
+    cursor: pointer;
+
+    &:hover {
+
+        color: ${props => props.theme.colorMainBlueClear1};
+        text-decoration: none;
+
+    }
+
 
 `;
 
@@ -253,6 +290,11 @@ const handleIconMouseHoover = (value) => {
                 <StyledEmailContainer>
                     Please drop me a line at <StyledEmail href={`mailto: ${data.email}`} >{email}</StyledEmail>                
                 </StyledEmailContainer>
+                <StyledDownloadLinkContainer>
+                    <StyledDownloadLink href="/RAFAEL_URBINA.pdf" download>
+                        Download my Resume in PDF here
+                    </StyledDownloadLink>
+                </StyledDownloadLinkContainer>                
             </StyledCenter>
         </StyledContainer>
     );

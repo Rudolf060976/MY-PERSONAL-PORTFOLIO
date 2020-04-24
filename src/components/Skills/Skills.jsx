@@ -112,11 +112,11 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     }
 
-     @media (min-width: 798px) and (min-height: 1200px)  {
+     @media (min-width: 790px) and (min-height: 1200px)  {
 
-        height: 170vh;
+        height: 160vh;
 
-        min-height: 170vh; 
+        min-height: 160vh; 
 
     }
 
@@ -156,9 +156,9 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
      @media (min-width: 1000px) and (min-height: 1800px)  {
 
-        height: 120vh;
+        height: 140vh;
 
-        min-height: 120vh; 
+        min-height: 140vh; 
 
     }
 

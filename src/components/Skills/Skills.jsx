@@ -49,6 +49,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
         height: 360vh;
 
         min-height: 360vh; 
+        
 
     }
      @media (max-width: 450px) and (max-height: 900px) {
@@ -92,6 +93,14 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     }
 
+     @media (max-width: 370px) and (max-height: 650px) {
+
+        height: 420vh;
+
+        min-height: 420vh; 
+
+    }
+
      @media (max-width: 350px) and (max-height: 650px) {
 
         height: 480vh;
@@ -102,13 +111,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
 
 
-     @media (min-width: 500px) and (min-height: 1800px)  {
 
-        height: 120vh;
-
-        min-height: 120vh; 
-
-    }
 
      @media (min-width: 700px) and (min-height: 1000px)  {
 

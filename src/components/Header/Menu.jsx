@@ -7,6 +7,8 @@ import { Link, Events, scrollSpy } from 'react-scroll';
 
 import { rgba } from 'polished';
 
+import { Link as LinkG } from 'gatsby';
+
 
 const animationOpen = keyframes`
 
@@ -166,8 +168,8 @@ const StyledListItem = styled.li`
    
 `;
 
-const StyledLinkOut = styled.a`
-
+const StyledGatsbyLink = styled(LinkG)`
+ 
     display: inline-block;
     width: 100%;
     padding: 5px 10px;
@@ -175,6 +177,9 @@ const StyledLinkOut = styled.a`
     text-transform: uppercase;
     transition: all .3s linear;
     position: relative;
+    font-family: Rubik, sans-serif, Geneva, Tahoma, Verdana;
+    color: ${props => props.theme.colorMainBlueClear2};
+    letter-spacing: 1px;
 
     font-size: 1.4rem;
     
@@ -356,7 +361,7 @@ function Menu({ openMenu, handleCloseMenu }) {
                     <StyledLink to="contact-scroll-point" smooth={true} duration={1200} onClick={(e) => handleCloseClick()}>Contact</StyledLink>
                 </StyledListItem>
                 <StyledListItem>
-                    <StyledLinkOut onClick={(e) => handleCloseClick()}>Blog</StyledLinkOut>
+                    <StyledGatsbyLink to="/blog" onClick={(e) => handleCloseClick()}>Blog</StyledGatsbyLink>
                 </StyledListItem>                
             </StyledList>      
         </StyledContainer>

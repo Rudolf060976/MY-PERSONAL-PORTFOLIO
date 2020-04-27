@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import {rgba} from 'polished';
 
 
 const StyledContainer = styled.div`
 
     width: 100%;
     
-    background-color: ${props => props.bgColor};    
+    background-color: #7962AE;    
 
     display: flex;
 
@@ -43,7 +44,9 @@ const StyledFeature = styled.p`
     width: 100%;
     font-family: Montserrat, sans-serif, Verdana, Geneva, Tahoma;
     font-size: 1.4rem;
+    color: ${rgba('white', 0.6)};
 
+    padding: 15px 0;
 `;
 
 const StyledTitle = styled.h4`
@@ -52,7 +55,10 @@ const StyledTitle = styled.h4`
     font-family: Montserrat, sans-serif, Verdana, Geneva, Tahoma;
     font-size: 2.6rem;
 
+    color: white;
+    letter-spacing: 2px;
 
+    
 `;
 
 const StyledImage = styled(Img)`
@@ -61,6 +67,13 @@ const StyledImage = styled(Img)`
 
     max-width: 250px;
 
+
+`;
+
+const StyledLink = styled(Link)`
+
+    text-decoration: none;
+    color: ${props => props.theme.colorMainBlueDark1}
 
 `;
 
@@ -100,7 +113,9 @@ function Featured() {
             <StyledCenter>
                 <StyledTitleContainer>
                     <StyledFeature>Artículo de Hoy</StyledFeature>
-                    <StyledTitle>{postData.title}</StyledTitle>
+                    <StyledLink to={postData.slug}>
+                        <StyledTitle>{postData.title}</StyledTitle>
+                    </StyledLink>                    
                 </StyledTitleContainer>
                 <StyledImage fluid={imageData} />
             </StyledCenter>

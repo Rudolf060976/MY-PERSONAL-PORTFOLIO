@@ -15,7 +15,9 @@ const theme = {
 	mainTransition: 'all 0.3s linear',
 	whiteBoxShadow: '1px 1px 15px whitesmoke',
 	glassBoxShadow: '2px 2px 5px white inset',
-	errorColor: '#FF6464'
+	errorColor: '#FF6464',
+	maxPageWidth: '2560px',
+	maxPageContentWidth: '1280px'
 };
 
 export default theme;

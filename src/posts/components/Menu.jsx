@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {rgba} from 'polished';
-import { Link } from 'gatsby';
+import { Link, gatsby, useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const StyledContainer = styled.div`
 
@@ -49,41 +50,88 @@ const StyledMenuLink = styled(Link)`
 
     }
 
+    
+`;
+
+const StyledFirstMenuLink = styled(Link)`
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 15px;
+    font-family: 'Lilita One', sans-serif, Verdana, Geneva, Tahoma;
+    font-size: 1.4rem;
+    color: ${props => props.theme.colorMainBlueDark3};
+    cursor: pointer;
+    font-weight: ${props => props.selected ? 'bold' : 'normal'};
+
+    transition: ${props => props.theme.mainTransition};
+
+    text-decoration: none;
+
+    &:hover {
+
+        color: ${props => props.theme.colorMainBlueClear1};
+
+    }
+
+    
+`;
+
+const StyledImage = styled(Img)`
+
+    
 
 `;
 
 
 function Menu({ selectedIndex }) {
+
+    const data = useStaticQuery(graphql`
+        query {
+            file(relativePath: { eq: "LOGO_RAFAEL_SOLO.png"}) {
+                childImageSharp {
+                    fixed(width:50) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+        }    
+    `);
+
+    const imageData = data.file.childImageSharp.fixed;
+
     return (
         <StyledContainer>
             <StyledMenu>
                 <StyledMenuItem>
-                    <StyledMenuLink to="/" selectedIndex={selectedIndex}>
-                        Rafael Urbina
-                    </StyledMenuLink>
+                    <StyledFirstMenuLink to="/" selectedIndex={selectedIndex}>
+                        <StyledImage fixed={imageData}/>
+                        AFAEL U.
+                    </StyledFirstMenuLink>
                 </StyledMenuItem>    
                 <StyledMenuItem>
-                    <StyledMenuLink selected={selectedIndex === 1}>
+                    <StyledMenuLink to="/blog" selected={selectedIndex === 1}>
                         Artículos Recientes
                     </StyledMenuLink>
                 </StyledMenuItem>          
                 <StyledMenuItem>
-                    <StyledMenuLink selected={selectedIndex === 2}>
+                    <StyledMenuLink to="/auto-aprendizaje" selected={selectedIndex === 2}>
                         Auto-aprendizaje
                     </StyledMenuLink>
                 </StyledMenuItem>          
                 <StyledMenuItem>
-                    <StyledMenuLink selected={selectedIndex === 3}>
+                    <StyledMenuLink to="/desarrollo-web" selected={selectedIndex === 3}>
                         Desarrollo Web
                     </StyledMenuLink>
                 </StyledMenuItem>     
                 <StyledMenuItem>
-                    <StyledMenuLink selected={selectedIndex === 4}>
+                    <StyledMenuLink to="/back-end" selected={selectedIndex === 4}>
                         Back-End
                     </StyledMenuLink>
                 </StyledMenuItem>     
                 <StyledMenuItem>
-                    <StyledMenuLink selected={selectedIndex === 5}>
+                    <StyledMenuLink to="/front-end" selected={selectedIndex === 5}>
                         Front-End
                     </StyledMenuLink>
                 </StyledMenuItem>       

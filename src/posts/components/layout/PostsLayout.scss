@@ -1,0 +1,9 @@
+@import '../../../globalStyles/globalVariables.scss';
+
+#post-page-layout-container{
+
+    width: 100%;
+    max-width: $PageContentMaxWidth;
+    margin: 0 auto;
+
+}

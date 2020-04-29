@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Parallax } from 'react-scroll-parallax';
-import { lighten, rgba } from 'polished';
+import { rgba } from 'polished';
 import SkillsLastItem from './SkillsLastItem';
 
 
@@ -112,14 +111,16 @@ const StyledContainer = styled.div.attrs(props => ({
             switch (props.itemID) {
                 case "1":
                     return "300px"; 
-                               
+                             
                 case "2":
-                    return "750px"
-
+                    return "750px";
+                    
                 case "3":
-                    return "1070px"
+                    return "1070px";
                 case "4":
-                    return "1520px"
+                    return "1520px";
+                default:
+                    return "300px";
             }
 
         }};  
@@ -138,12 +139,14 @@ const StyledContainer = styled.div.attrs(props => ({
                 return "270px"; 
                    
             case "2":
-                return "720px"
+                return "720px";
 
             case "3":
-                return "1040px"
+                return "1040px";
             case "4":
-                return "1490px"
+                return "1490px";
+            default:
+                return "300px";
         }
 
         }};       
@@ -160,12 +163,14 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "270px"; 
                    
                 case "2":
-                    return "720px"
+                    return "720px";
 
                 case "3":
-                    return "1170px"
+                    return "1170px";
                 case "4":
-                    return "1750px"
+                    return "1750px";
+                default:
+                    return "300px";
             }
 
         }};       
@@ -180,14 +185,16 @@ const StyledContainer = styled.div.attrs(props => ({
             switch (props.itemID) {
                 case "1":
                     return "270px"; 
-                   
+                    
                 case "2":
-                    return "830px"
+                    return "830px";
 
                 case "3":
-                    return "1260px"
+                    return "1260px";
                 case "4":
-                    return "1950px"
+                    return "1950px";
+                default:
+                    return "300px";
             }
 
         }};  
@@ -203,12 +210,14 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "230px"; 
                    
                 case "2":
-                    return "900px"
+                    return "900px";
 
                 case "3":
-                    return "1440px"
+                    return "1440px";
                 case "4":
-                    return "2240px"
+                    return "2240px";
+                default:
+                    return "300px";
             }
 
         }};  
@@ -225,12 +234,14 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "160px"; 
                    
                 case "2":
-                    return "830px"
+                    return "830px";
 
                 case "3":
-                    return "1370px"
+                    return "1370px";
                 case "4":
-                    return "2170px"
+                    return "2170px";
+                default:
+                    return "300px";
             }
 
         }};  
@@ -252,12 +263,14 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "160px"; 
                    
                 case "2":
-                    return "700px"
+                    return "700px";
 
                 case "3":
-                    return "1110px"
+                    return "1110px";
                 case "4":
-                    return "1780px"
+                    return "1780px";
+                default:
+                    return "300px";
             }
 
         }};  
@@ -282,6 +295,8 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "1060px";
                 case "4":
                     return "1710px";
+                default:
+                    return "300px";
             }
 
         }};  
@@ -305,6 +320,8 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "1310px"
                 case "4":
                     return "2080px"
+                default:
+                    return "300px";
             }
 
         }};  

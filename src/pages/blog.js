@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import IndexLayout from '../posts/components/layout/IndexLayout';
 import Featured from '../posts/components/Featured';
 import { graphql } from 'gatsby';

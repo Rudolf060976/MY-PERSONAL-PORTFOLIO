@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -299,8 +299,7 @@ const StyledCloseButton = styled.span`
 function Menu({ openMenu, handleCloseMenu }) {
 
     const [closeMenu, setCloseMenu] = useState(false);
-
-    const outerDiv = useRef(); // LO USAREMOS PARA DETECTAR CLICK FUERA DEL CONTENEDOR Y CERRAR EL MODAL
+  
 
     useEffect(() => {
         

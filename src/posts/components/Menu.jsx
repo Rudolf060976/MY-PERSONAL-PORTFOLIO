@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {rgba} from 'polished';
-import { Link, gatsby, useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 

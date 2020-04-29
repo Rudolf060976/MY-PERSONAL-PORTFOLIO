@@ -172,7 +172,7 @@ export function PRE({ children, ...props }) {
 
         const langString = nombreClase.match(re);
 
-        const langName = langString[0].replace(/\language-(\w+)/ig,'$1');
+        const langName = langString[0].replace(/language-(\w+)/ig,'$1');
 
         let lang = null;
 

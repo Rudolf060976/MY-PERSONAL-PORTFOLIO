@@ -77,7 +77,7 @@ function BlogIndexPage({ data }) {
     const metaFacebook = [
         {
             property: `og:url`,
-            content: 'http://www.rafaelurbinadevpro.com/blog'
+            content: 'https://www.rafaelurbinadevpro.com/blog'
         },
         {
             property: `og:type`,

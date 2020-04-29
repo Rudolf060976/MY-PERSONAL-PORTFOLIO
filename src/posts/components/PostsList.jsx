@@ -6,6 +6,7 @@ import PostItem from './PostItem';
 const StyledContainer = styled.div`
 
     width: 100%;
+    position: relative;
     max-width: 1280px;
     margin: 0 auto;
 
@@ -23,21 +24,23 @@ const StyledContainer = styled.div`
 
     gap: 20px 20px;
 
+
 `;
 
 
-function PostsList({ postsList }) {
+function PostsList({ postsList, FacebookShareButton }) {
 
     const output = postsList.map(post => {
 
         return (
-            <PostItem key={post.id} post={post} />
+            <PostItem key={post.id} post={post} />                       
         );
     });
 
     return (
         <StyledContainer>
-            {output}
+            <FacebookShareButton />           
+            {output}             
         </StyledContainer>
     )
 }

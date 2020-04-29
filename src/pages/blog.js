@@ -1,14 +1,68 @@
 import React from 'react';
+import styled, { withTheme } from 'styled-components';
 import IndexLayout from '../posts/components/layout/IndexLayout';
 import Featured from '../posts/components/Featured';
 import { graphql } from 'gatsby';
 import moment from 'moment';
 import PostsList from '../posts/components/PostsList';
 import SEO from '../components/seo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {darken} from 'polished';
+
+const FacebookButton = ({ className }) => {
+
+    const spanStyle={
+        width: '100%',
+        backgroundColor: 'transparent',
+        border: 'none'    
+    };
+
+    const linkStyle={
+        display: 'block',
+        width: '100%',
+        padding: '0', 
+        backgroundColor: 'transparent',       
+        fontSize: '30px',
+        textDecoration: 'none'        
+    };
+
+    
+
+    return (
+        <button className={className}>
+            <span style={spanStyle} className="fb-share-button" data-href="https://www.rafaelurbinadevpro.com/blog" data-layout="" data-size="large"><a style={linkStyle} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rafaelurbinadevpro.com%2Fblog&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore"><FontAwesomeIcon icon={['fab',"facebook"]} size="lg" /></a></span>
+        </button>        
+    );
+};
+
+const StyledFacebookButton = styled(FacebookButton)`
+
+    border: none;        
+    background-color: transparent;
+    max-width: 200px;
+    position: absolute;
+    top: 50px;
+    left: -100px;
+
+    & > span > a {
+
+        color: ${props => darken(0.1,props.theme.colorMainBlueGray)};
+        
+    }
+
+    & > span > a:hover {
+
+        color: #3b5998;
+
+    }
+   
+`;
+
 
 
 function BlogIndexPage({ data }) {
-    
+
+        
     const postsArray = data.allMdx.nodes;
 
     const recentPostsArray = postsArray.filter(post => {
@@ -35,31 +89,32 @@ function BlogIndexPage({ data }) {
         },
         {
             property: `og:description`,
-            content: 'Prepárate desde hoy en Desarrollo Web!'
+            content: 'Prepárate para Aprender Desarrollo Web!'
         },
         {
             property: `og:image`,
-            content: "/AUTOLEARNING.png"
+            content: "https://www.rafaelurbinadevpro.com/AUTOLEARNING.png"
         },
         {
             property: `og:image:width`,
-            content: "100"
+            content: "50"
         },
         {
             property: `og:image:height`,
-            content: "200"
+            content: "50"
         }
 
 
     ];
 
+   
+    
 
     return (
         <IndexLayout selectedIndex={1}>
             <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />
             <Featured />            
-            <PostsList postsList={recentPostsArray} />            
-            <div class="fb-share-button" data-href="https://www.rafaelurbinadevpro.com/blog" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rafaelurbinadevpro.com%2Fblog&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+            <PostsList postsList={recentPostsArray} FacebookShareButton={StyledFacebookButton}/>              
         </IndexLayout>
     );
 }
@@ -93,3 +148,4 @@ export const pageQuery = graphql`
 
 
 export default BlogIndexPage;
+

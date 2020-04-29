@@ -93,15 +93,7 @@ function BlogIndexPage({ data }) {
         },
         {
             property: `og:image`,
-            content: "https://www.rafaelurbinadevpro.com/AUTOLEARNING.png"
-        },
-        {
-            property: `og:image:width`,
-            content: "50px"
-        },
-        {
-            property: `og:image:height`,
-            content: "50px"
+            content: "https://www.rafaelurbinadevpro.com/FACEBOOK-CARD-BLOG.jpg"
         }
 
 

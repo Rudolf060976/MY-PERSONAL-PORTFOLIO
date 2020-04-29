@@ -35,12 +35,22 @@ function BlogIndexPage({ data }) {
         },
         {
             property: `og:description`,
-            content: 'Comienza a prepararte para ser un auto-didacta y especialista en Desarrollo Web'
+            content: 'Prepárate desde hoy en Desarrollo Web!'
         },
         {
             property: `og:image`,
             content: "/AUTOLEARNING.png"
+        },
+        {
+            property: `og:image:width`,
+            content: "100"
+        },
+        {
+            property: `og:image:height`,
+            content: "200"
         }
+
+
     ];
 
 

@@ -30,9 +30,9 @@ const FacebookButton = ({ className }) => {
 
     return (
         <button className={className}>
-            <span style={spanStyle} className="fb-share-button" data-href="https://www.rafaelurbinadevpro.com/blog" data-layout="" data-size="large"><a style={linkStyle} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rafaelurbinadevpro.com%2Fblog&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore"><FontAwesomeIcon icon={['fab',"facebook"]} size="lg" /></a></span>
+            <span style={spanStyle} className="" data-href="https://www.rafaelurbinadevpro.com/blog" data-layout="" data-size="large"><a style={linkStyle} target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rafaelurbinadevpro.com%2Fblog&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore"><FontAwesomeIcon icon={['fab',"facebook"]} size="lg" /></a></span>
         </button>        
-    );
+    );  // className="fb-share-button"
 };
 
 const StyledFacebookButton = styled(FacebookButton)`

@@ -1,0 +1,22 @@
+/* Adjust the position of the line numbers */
+// ESTA HOJA DE ESTILOS PERMITE AJUSTAR LOS BLOQUES DE CODIGO GENERADOS POR gatsby-remark-prismjs
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+    
+    padding-left: 80px;       
+    box-shadow: 5px 5px 10px gray;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+    
+}
+
+
+  .line-numbers-rows {
+
+    padding-left: 30px;    
+
+  }
+
+

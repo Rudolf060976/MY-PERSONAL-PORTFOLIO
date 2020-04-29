@@ -4,6 +4,7 @@ import Featured from '../posts/components/Featured';
 import { graphql } from 'gatsby';
 import moment from 'moment';
 import PostsList from '../posts/components/PostsList';
+import SEO from '../components/seo';
 
 
 function BlogIndexPage({ data }) {
@@ -19,11 +20,36 @@ function BlogIndexPage({ data }) {
         return (postDate.add(7,"days").format("X") >= today.format("X"));  // SOLO SELECCIONA LOS POSTS DE LOS ULTIMOS 7 DIAS
     });
 
+    const metaFacebook = [
+        {
+            property: `og:url`,
+            content: 'http://www.rafaelurbinadevpro.com/blog'
+        },
+        {
+            property: `og:type`,
+            content: 'article' // puede ser tambien 'website'
+        },
+        {
+            property: `og:title`,
+            content: 'Blog Profesional del Ing. Rafael E. Urbina N.'
+        },
+        {
+            property: `og:description`,
+            content: 'Comienza a prepararte para ser un auto-didacta y especialista en Desarrollo Web'
+        },
+        {
+            property: `og:image`,
+            content: "/AUTOLEARNING.png"
+        }
+    ];
+
 
     return (
         <IndexLayout selectedIndex={1}>
-            <Featured />
-            <PostsList postsList={recentPostsArray} />
+            <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />
+            <Featured />            
+            <PostsList postsList={recentPostsArray} />            
+            <div class="fb-share-button" data-href="https://www.rafaelurbinadevpro.com/blog" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.rafaelurbinadevpro.com%2Fblog&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
         </IndexLayout>
     );
 }

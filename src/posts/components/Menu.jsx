@@ -4,6 +4,7 @@ import {rgba} from 'polished';
 import { Link, gatsby, useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
+
 const StyledContainer = styled.div`
 
     width: 100%;

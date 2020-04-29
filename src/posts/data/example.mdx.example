@@ -1,0 +1,103 @@
+---
+title: Aprende a Aprender por ti mismo en 5 pasos!
+slug: /aprende-a-aprender
+date: 2020-04-25
+author: Rafael E. Urbina N.
+aboutAuthor: "Rafael Urbina es Ingeniero Electrónico y Desarrollador Web Full Stack. Autodidacta apasionado, emplea gran parte de su tiempo en enseñar a otros a prepararse y desarrollar sus destrezas por cuenta propia."
+category: Auto-aprendizaje
+featured: false
+bkColor: "#F0DEA8"
+headerImage: ../images/AUTOLEARNING.png
+authorImage: ../images/RAFAEL-URBINA-PHOTO.jpg
+---
+
+
+# H1 El Difícil Camino de Aprender solo tiene sus recompensas porque esa es una de las cosas mas importantes {#IR-AL-PRINCIPIO}    
+
+## H2 El Difícil Camino de Aprender solo tiene sus recompensas {#IR-AL-H2}
+
+### H3 El Difícil Camino de Aprender solo tiene sus recompensas
+
+#### H4 El Difícil Camino de Aprender solo tiene sus recompensas
+
+##### H5 El Difícil Camino de Aprender solo tiene sus recompensas
+
+###### H6 El Difícil Camino de Aprender solo tiene sus recompensas
+
+<LocalLink to="IRALFINAL">IR AL ULTIMO H1 LENTAMENTE</LocalLink> 
+
+Este es un ejemplo de parrafo que puede servir para el diseñador del sitio web
+
+Este es otro ejemplo de un [Enlace](http://www.rafaelurbinadevpro.com)
+
+Este es otro ejemplo de <Link to="/auto-aprendizaje">LINK TO AUTO APRENDIZAJE</Link>
+
+
+- Primero Elemento
+- Segundo Elemento
+- Tercer Elemento
+
+
+BLOQUE DE CODIGO CON LENGUAJE javascript
+```javascript
+
+<h1>HOLA</h1>
+// In your gatsby-config.js
+import styled from 'styled-components'
+
+const StyledContainer = styled.div`
+
+    width: 100%;
+    max-width: 1280px;    
+`;
+
+const dataArray=[];
+// HAY QUE AÑADIR UNOS CARACTERES DE ESPACIO EN LA ULTIMA LINEA PARA QUE GENERE UNA LINEA EN BLANCO NUMERADA  
+  
+```
+
+
+###### H6 El Difícil Camino de Aprender solo tiene sus recompensas 
+
+EJEMPLO DE REGLA
+
+---
+
+EJEMPLO DE IMAGEN
+
+<img src="../images/AUTOLEARNING.png" />
+
+
+# H1 El Difícil Camino de Aprender solo tiene sus recompensas porque esa es una de las cosas mas importantes {#IRALFINAL}  
+
+
+![](../images/WELCOME.png)
+
+
+
+<LocalLink to="IR-AL-H2">IR AL H2 LENTAMENTE</LocalLink>  
+
+
+Esto es un Inline Code Block `css~.some-class { background-color: red }` with CSS syntax.  <!-- EL SIMBOLO PARA INLINE CODE BLOCK EN gatsby-config.js es ~ -->
+
+Este es otro Inline Code Block `javascript~const prodData= props => props.theme.BlueClear;` Inline Code Blocks.
+
+
+BLOQUE DE CODIGO SIN NINGUN LENGUAJE PARTICULAR
+
+```none
+
+// In your gatsby-config.js
+import styled from 'styled-components'
+
+const StyledContainer = styled.div`
+
+    width: 100%;
+    max-width: 1280px;    
+`;
+
+const dataArray=[];
+// HAY QUE AÑADIR UNOS CARACTERES DE ESPACIO EN LA ULTIMA LINEA PARA QUE GENERE UNA LINEA EN BLANCO NUMERADA  
+  
+```
+

@@ -39,7 +39,7 @@ function PostsList({ postsList, FacebookShareButton }) {
 
     return (
         <StyledContainer>
-            <FacebookShareButton />           
+            {FacebookShareButton ? <FacebookShareButton /> : null}          
             {output}             
         </StyledContainer>
     )

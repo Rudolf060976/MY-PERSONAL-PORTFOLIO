@@ -165,7 +165,7 @@ module.exports = {
   
         // Include Facebook analytics in development.
         // Defaults to false meaning the library will only be loaded in production.
-        includeInDevelopment: true,
+        includeInDevelopment: false,
   
         // Include debug version of sdk
         // Defaults to false meaning the library will load sdk.js

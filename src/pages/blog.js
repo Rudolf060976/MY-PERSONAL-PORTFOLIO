@@ -47,7 +47,7 @@ const StyledFacebookButton = styled(FacebookButton)`
     & > span > a {
 
         color: ${props => darken(0.1,props.theme.colorMainBlueGray)};
-        
+        transition: all .2s linear;
     }
 
     & > span > a:hover {
@@ -97,11 +97,11 @@ function BlogIndexPage({ data }) {
         },
         {
             property: `og:image:width`,
-            content: "50"
+            content: "50px"
         },
         {
             property: `og:image:height`,
-            content: "50"
+            content: "50px"
         }
 
 

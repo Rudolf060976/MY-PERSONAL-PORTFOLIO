@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import '../FontAwesome/library';
 import IndexLayout from '../posts/components/layout/IndexLayout';
@@ -7,8 +8,25 @@ import moment from 'moment';
 import PostsList from '../posts/components/PostsList';
 import SEO from '../components/seo';
 import FacebookButton from '../posts/components/FacebookButton';
+import EmailButton from '../posts/components/EmailButton';
+
+const StyledFacebookButton = styled(FacebookButton)`
+
+    position: absolute;
+    top: 380px;
+    left: 100px;
 
 
+`;
+
+const StyledEmailButton = styled(EmailButton)`
+
+    position: absolute;
+    top: 450px;
+    left: 100px;
+
+
+`;
 
 
 function BlogIndexPage({ data }) {
@@ -49,13 +67,16 @@ function BlogIndexPage({ data }) {
 
     ];
 
-       
+       const subject = 'Blog Profesional del Ing. Rafael E. Urbina N.';
+
+       const body = 'Te comparto este Blog que contiene información interesante sobre temas de Auto-aprendizaje y Desarrollo Web, ubicado en:  https://www.rafaelurbinadevpro.com/blog';
 
     return (
         <IndexLayout selectedIndex={1}>             
             <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />            
             <Featured /> 
-            <FacebookButton pageSlug="/blog" />                     
+            <StyledFacebookButton pageSlug="/blog" />  
+            <StyledEmailButton subject={subject} body={body} />                   
             <PostsList postsList={recentPostsArray} />              
         </IndexLayout>
     ); //

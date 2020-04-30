@@ -44,9 +44,7 @@ const StyledFacebookButton = styled(FacebookButton)`
     border: none;        
     background-color: transparent;
     max-width: 200px;
-    position: absolute;
-    top: 380px;
-    left: 100px;
+    
     
 
     & > a {

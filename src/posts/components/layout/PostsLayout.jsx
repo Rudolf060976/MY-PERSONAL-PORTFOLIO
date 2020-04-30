@@ -14,6 +14,24 @@ import * as Elements from '../HTMLComponents/Elements';
 import {rgba} from 'polished';
 import FacebookButton from '../../components/FacebookButton';
 import SEO from '../../../components/seo';
+import EmailButton from '../../components/EmailButton';
+
+const StyledFacebookButton = styled(FacebookButton)`
+
+    position: absolute;
+    top: 380px;
+    left: 100px;
+
+`;
+
+const StyledEmailButton = styled(EmailButton)`
+
+    position: absolute;
+    top: 450px;
+    left: 100px;
+
+
+`;
 
 
 const StyledLink = styled(Link)`
@@ -144,12 +162,18 @@ function PostsLayout({ data }) {
 
     ];
 
+
+    const subject = `Artículo: ${postData.frontmatter.title}`;
+
+    const body = `Te comparto este Interesante Artículo del Blog de Rafael E. Urbina ubicado en:  https://www.rafaelurbinadevpro.com${postData.frontmatter.slug}`;
+
     return (
         <IndexLayout selectedIndex={catIndex}>
             <SEO title={postData.frontmatter.title} meta={metaFacebook} description="Blog de Rafael Urbina" />      
             <PostHeader postData={postData} />
                 <div id="post-page-layout-container">
-                    <FacebookButton pageSlug={postData.frontmatter.slug} />
+                    <StyledFacebookButton pageSlug={postData.frontmatter.slug} />
+                    <StyledEmailButton subject={subject} body={body} />   
                     <MDXProvider components={shortcodes}>
                         <MDXRenderer>
                             {data.mdx.body}

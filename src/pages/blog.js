@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import IndexLayout from '../posts/components/layout/IndexLayout';
 import Featured from '../posts/components/Featured';
@@ -52,8 +52,8 @@ const StyledFacebookButton = styled(FacebookButton)`
     background-color: transparent;
     max-width: 200px;
     position: absolute;
-    top: 50px;
-    left: -100px;
+    top: 380px;
+    left: 100px;
     
 
     & > a {
@@ -73,8 +73,6 @@ const StyledFacebookButton = styled(FacebookButton)`
 
 
 function BlogIndexPage({ data }) {
-
-    const [FacebookComponent, setFacebookComponent] = useState(null);        
 
     const postsArray = data.allMdx.nodes;
 
@@ -112,18 +110,14 @@ function BlogIndexPage({ data }) {
 
     ];
 
-    useEffect(() => {
-        
-        setFacebookComponent(StyledFacebookButton);
-
-    }, [])
-    
+       
 
     return (
         <IndexLayout selectedIndex={1}>             
             <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />            
-            <Featured />                      
-            <PostsList postsList={recentPostsArray} FacebookShareButton={FacebookComponent} />              
+            <Featured /> 
+            <StyledFacebookButton />                     
+            <PostsList postsList={recentPostsArray} />              
         </IndexLayout>
     ); //
 }

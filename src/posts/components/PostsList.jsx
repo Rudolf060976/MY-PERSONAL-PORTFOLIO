@@ -28,7 +28,7 @@ const StyledContainer = styled.div`
 `;
 
 
-function PostsList({ postsList, FacebookShareButton }) {
+function PostsList({ postsList }) {
 
     const output = postsList.map(post => {
 
@@ -38,8 +38,7 @@ function PostsList({ postsList, FacebookShareButton }) {
     });
 
     return (
-        <StyledContainer>
-            {FacebookShareButton ? <FacebookShareButton /> : null}          
+        <StyledContainer>                  
             {output}             
         </StyledContainer>
     )

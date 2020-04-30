@@ -1,7 +1,7 @@
 import React from 'react';
-import IndexLayout from '../posts/components/layout/IndexLayout';
+import IndexLayout from '../../posts/components/layout/IndexLayout';
 import styled from 'styled-components';
-import PostsList from '../posts/components/PostsList';
+import PostsList from '../../posts/components/PostsList';
 
 
 const StyledContainer = styled.div`

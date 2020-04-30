@@ -116,22 +116,22 @@ function Menu({ selectedIndex }) {
                     </StyledMenuLink>
                 </StyledMenuItem>          
                 <StyledMenuItem>
-                    <StyledMenuLink to="/auto-aprendizaje" selected={selectedIndex === 2}>
+                    <StyledMenuLink to="/blog/auto-aprendizaje" selected={selectedIndex === 2}>
                         Auto-aprendizaje
                     </StyledMenuLink>
                 </StyledMenuItem>          
                 <StyledMenuItem>
-                    <StyledMenuLink to="/desarrollo-web" selected={selectedIndex === 3}>
+                    <StyledMenuLink to="/blog/desarrollo-web" selected={selectedIndex === 3}>
                         Desarrollo Web
                     </StyledMenuLink>
                 </StyledMenuItem>     
                 <StyledMenuItem>
-                    <StyledMenuLink to="/back-end" selected={selectedIndex === 4}>
+                    <StyledMenuLink to="/blog/back-end" selected={selectedIndex === 4}>
                         Back-End
                     </StyledMenuLink>
                 </StyledMenuItem>     
                 <StyledMenuItem>
-                    <StyledMenuLink to="/front-end" selected={selectedIndex === 5}>
+                    <StyledMenuLink to="/blog/front-end" selected={selectedIndex === 5}>
                         Front-End
                     </StyledMenuLink>
                 </StyledMenuItem>       

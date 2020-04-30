@@ -1,7 +1,7 @@
 import React from 'react';
-import IndexLayout from '../posts/components/layout/IndexLayout';
+import IndexLayout from '../../posts/components/layout/IndexLayout';
 import styled from 'styled-components';
-import PostsList from '../posts/components/PostsList';
+import PostsList from '../../posts/components/PostsList';
 
 
 const StyledContainer = styled.div`
@@ -31,19 +31,19 @@ const StyledTitle = styled.h4`
 
 
 
-function BackEndPage({ data }) {
+function DesarrolloWebPage({ data }) {
 
     const postsArray = data.allMdx.nodes;
 
     const selectedPostsArray = postsArray.filter(post => {
 
-        return (post.frontmatter.category === "Back-End");
+        return (post.frontmatter.category === "Desarrollo Web");
 
     });
 
     return (
-        <IndexLayout selectedIndex={4}>
-            <StyledTitle>Back-End</StyledTitle>
+        <IndexLayout selectedIndex={3}>
+            <StyledTitle>Desarrollo Web</StyledTitle>
             <StyledContainer>                
                 <PostsList postsList={selectedPostsArray} />   
             </StyledContainer>                    
@@ -53,7 +53,7 @@ function BackEndPage({ data }) {
 
 
 export const pageQuery = graphql`
-    query pageBackEndQuery {
+    query pageWebDevelopmentQuery {
       allMdx {
       nodes {
         id
@@ -79,4 +79,4 @@ export const pageQuery = graphql`
     }
 `;
 
-export default BackEndPage;
+export default DesarrolloWebPage;

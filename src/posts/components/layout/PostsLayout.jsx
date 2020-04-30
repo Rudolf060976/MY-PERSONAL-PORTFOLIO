@@ -11,8 +11,8 @@ import './PostsLayout.scss';
 import * as Headers from '../HTMLComponents/Headers';
 import * as Elements from '../HTMLComponents/Elements';
 import {rgba} from 'polished';
-/* import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-deckDeckGoHighlightElement();  // PARA HACER CODE BLOCKS EN LOS BLOGS MDX USANDO ```  ``` */
+import FacebookButton from '../../components/FacebookButton';
+import SEO from '../../../components/seo';
 
 
 const StyledLink = styled(Link)`
@@ -96,7 +96,6 @@ function PostsLayout({ data }) {
         }
     },[]);
 
-
     const postData = data.mdx;
     
     let catIndex = null;
@@ -118,10 +117,38 @@ function PostsLayout({ data }) {
             break;
     }
 
+
+    const metaFacebook = [
+        {
+            property: `og:url`,
+            content: `https://www.rafaelurbinadevpro.com${postData.frontmatter.slug}`
+        },
+        {
+            property: `og:type`,
+            content: 'article' // puede ser tambien 'website'
+        },
+        {
+            property: `og:title`,
+            content: `${postData.frontmatter.title}`
+        },
+        {
+            property: `og:description`,
+            content: `${postData.frontmatter.author}`
+        },
+        {
+            property: `og:image`,
+            content: ""
+        }
+
+
+    ];
+
     return (
         <IndexLayout selectedIndex={catIndex}>
+            <SEO title={postData.frontmatter.title} meta={metaFacebook} description="Blog de Rafael Urbina" />      
             <PostHeader postData={postData} />
                 <div id="post-page-layout-container">
+                    <FacebookButton pageSlug={postData.frontmatter.slug} />
                     <MDXProvider components={shortcodes}>
                         <MDXRenderer>
                             {data.mdx.body}

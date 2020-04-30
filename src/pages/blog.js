@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import IndexLayout from '../posts/components/layout/IndexLayout';
 import Featured from '../posts/components/Featured';
@@ -54,6 +54,7 @@ const StyledFacebookButton = styled(FacebookButton)`
     position: absolute;
     top: 50px;
     left: -100px;
+    
 
     & > a {
 
@@ -73,7 +74,8 @@ const StyledFacebookButton = styled(FacebookButton)`
 
 function BlogIndexPage({ data }) {
 
-        
+    const [FacebookComponent, setFacebookComponent] = useState(null);        
+
     const postsArray = data.allMdx.nodes;
 
     const recentPostsArray = postsArray.filter(post => {
@@ -110,16 +112,20 @@ function BlogIndexPage({ data }) {
 
     ];
 
-   
+    useEffect(() => {
+        
+        setFacebookComponent(StyledFacebookButton);
+
+    }, [])
     
 
     return (
-        <IndexLayout selectedIndex={1}>
-            <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />
-            <Featured />            
-            <PostsList postsList={recentPostsArray} FacebookShareButton={StyledFacebookButton}/>              
+        <IndexLayout selectedIndex={1}>             
+            <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />            
+            <Featured />                      
+            <PostsList postsList={recentPostsArray} FacebookShareButton={FacebookComponent} />              
         </IndexLayout>
-    );
+    ); //
 }
 
 export const pageQuery = graphql`

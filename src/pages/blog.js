@@ -1,8 +1,9 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import '../FontAwesome/library';
 import IndexLayout from '../posts/components/layout/IndexLayout';
 import Featured from '../posts/components/Featured';
-import { graphql } from 'gatsby';
 import moment from 'moment';
 import PostsList from '../posts/components/PostsList';
 import SEO from '../components/seo';

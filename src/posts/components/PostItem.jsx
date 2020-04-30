@@ -19,9 +19,7 @@ const StyledContainer = styled(Link)`
 
     transition: all .1s linear;
 
-    &:hover {
-
-        
+    &:hover {        
 
         box-shadow: 0px 5px 5px gray;
 
@@ -37,12 +35,42 @@ const StyledImageContainer = styled.div`
 
     height: 250px;
 
+     @media (max-width: 950px) {
+
+        height: 200px;
+
+    }
+
+     @media (max-width: 550px) {
+
+        height: 170px;
+
+    }
+
+    @media (max-width: 500px) {
+
+        height: 200px;
+
+    }
+
 `;
 
 const StyledImage = styled(Image)`
 
-    
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
+
+    @media (max-width: 550px) {
+
+        max-width: 150px;
+
+    }
+
+      @media (max-width: 500px) {
+
+        max-width: 200px;
+
+    }
     
 
 `;
@@ -57,8 +85,21 @@ const StyledDescriptionContainer = styled.div`
 
     border-radius: 0px 0px 10px 10px;
 
-    padding: 20px 20px
+    padding: 20px 20px;
 
+     @media (max-width: 1000px) {
+
+        height: 100px;
+
+    }
+
+     @media (max-width: 500px) {
+
+        height: 110px;
+
+    }
+
+   
 `;
 
 const StyledCategory = styled.p`
@@ -72,6 +113,24 @@ const StyledCategory = styled.p`
 
     color: whitesmoke;
 
+     @media (max-width: 1000px) {
+
+        font-size: 12px;
+
+    }
+
+     @media (max-width: 700px) {
+
+        font-size: 10px;
+
+    }
+
+     @media (max-width: 500px) {
+
+        font-size: 12px;
+
+    }
+
 `;
 
 const StyledTitle = styled.p`
@@ -84,23 +143,43 @@ const StyledTitle = styled.p`
 
     color: white;
 
+
+     @media (max-width: 1000px) {
+
+        font-size: 16px;
+
+    }
+
+     @media (max-width: 700px) {
+
+        font-size: 14px;
+
+    }
+
+     @media (max-width: 500px) {
+
+        font-size: 16px;
+
+    }
+
+
 `;
 
 function PostItem({ post }) {
 
-    const imageData = post.frontmatter.headerImage.childImageSharp.fixed;
+    const imageData = post.frontmatter.headerImage.childImageSharp.fluid;
 
     return (
         <StyledContainer to={post.frontmatter.slug} bgColor={post.frontmatter.bkColor}>
             <StyledImageContainer>
-                <StyledImage fixed={imageData} />
+                <StyledImage fluid={imageData} />
             </StyledImageContainer>
             <StyledDescriptionContainer>
                 <StyledCategory>{post.frontmatter.category}</StyledCategory>
                 <StyledTitle>{post.frontmatter.title}</StyledTitle>
             </StyledDescriptionContainer>
         </StyledContainer>
-    )
+    );
 }
 
 export default PostItem;

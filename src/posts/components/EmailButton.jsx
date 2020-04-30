@@ -18,7 +18,7 @@ const EmailButton = ({ className, ...props }) => {
         width: '100%',
         padding: '0', 
         backgroundColor: 'transparent',       
-        fontSize: '30px',
+        fontSize: '24px',
         textDecoration: 'none'        
     };
 

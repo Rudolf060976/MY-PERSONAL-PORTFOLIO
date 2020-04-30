@@ -67,8 +67,8 @@ export const pageQuery = graphql`
           category
           headerImage {
                         childImageSharp {
-                            fixed(width:200) {
-                                ...GatsbyImageSharpFixed
+                            fluid(maxWidth:200) {
+                                ...GatsbyImageSharpFluid
                             }
                         }
 

@@ -30,16 +30,16 @@ const StyledDataContainer = styled.div`
 
 const StyledAuthorName = styled.p`
 
-    font-family: 'Montserrat', sans-serif, Verdana, Geneva, Tahoma;
+    font-family: Roboto, sans-serif, Verdana, Geneva, Tahoma;
     font-size: 18px;
     color: ${props => props.theme.colorMainBlueDark3};
-    font-style: italic;
+    font-weight: bold;
 
 `;
 
 const StyledDate = styled.p`
 
-    font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
+    font-family: Roboto, sans-serif, Verdana, Geneva, Tahoma;
     font-size: 14px;
     padding: 5px 0;
     color: ${props => props.theme.colorMainBlueDark3};

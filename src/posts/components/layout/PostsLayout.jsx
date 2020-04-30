@@ -15,6 +15,8 @@ import {rgba} from 'polished';
 import FacebookButton from '../../components/FacebookButton';
 import SEO from '../../../components/seo';
 import EmailButton from '../../components/EmailButton';
+import PostAuthorFootInfo from '../PostAuthorFootInfo';
+
 
 const StyledFacebookButton = styled(FacebookButton)`
 
@@ -167,6 +169,14 @@ function PostsLayout({ data }) {
 
     const body = `Te comparto este Interesante Artículo del Blog de Rafael E. Urbina ubicado en:  https://www.rafaelurbinadevpro.com${postData.frontmatter.slug}`;
 
+
+    const authorData = {
+        author: postData.frontmatter.author,
+        aboutAuthor: postData.frontmatter.aboutAuthor,
+        authorWebsite: postData.frontmatter.authorWebsite,
+        authorImageFixed: postData.frontmatter.authorImage.childImageSharp.fixed
+    };
+
     return (
         <IndexLayout selectedIndex={catIndex}>
             <SEO title={postData.frontmatter.title} meta={metaFacebook} description="Blog de Rafael Urbina" />      
@@ -179,6 +189,7 @@ function PostsLayout({ data }) {
                             {data.mdx.body}
                         </MDXRenderer>
                     </MDXProvider>
+                    <PostAuthorFootInfo authorData={authorData} />
                 </div>                   
         </IndexLayout>
     );
@@ -196,6 +207,7 @@ export const pageQuery = graphql`
                 date (formatString: "MMMM DD, YYYY")
                 author
                 aboutAuthor
+                authorWebsite
                 bkColor
                 category
                 headerImage {
@@ -207,7 +219,7 @@ export const pageQuery = graphql`
                 }
                 authorImage {
                     childImageSharp {
-                        fixed(width:50) {
+                        fixed(width:60) {
                             ...GatsbyImageSharpFixed
                         }
                     }

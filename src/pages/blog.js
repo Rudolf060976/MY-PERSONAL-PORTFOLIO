@@ -16,6 +16,65 @@ const StyledFacebookButton = styled(FacebookButton)`
     top: 380px;
     left: 100px;
 
+    @media (max-width: 1700px) {
+
+        top: 360px;
+        left: 300px;
+        z-index: 3000;
+
+    }
+
+     @media (max-width: 1400px) {
+
+        top: 360px;
+        left: 110px;  
+                     
+    }
+
+    @media (max-width: 950px) {
+
+        top: 340px;
+        left: 100px;
+
+    }
+
+     @media (max-width: 840px) {
+
+        top: 320px;
+
+    }
+
+     @media (max-width: 770px) {
+
+        top: 300px;
+
+    }
+
+     @media (max-width: 690px) {
+
+        top: 280px;
+
+    }
+
+     @media (max-width: 600px) {
+
+        top: 310px;
+        left: 50px;
+
+    }
+
+     @media (max-width: 360px) {
+
+        top: 330px;       
+
+    }
+
+     @media (max-width: 270px) {
+
+        top: 350px;       
+
+    }
+
 
 `;
 
@@ -25,6 +84,65 @@ const StyledEmailButton = styled(EmailButton)`
     top: 450px;
     left: 100px;
 
+     @media (max-width: 1700px) {
+
+        top: 360px;
+        left: 390px;
+        z-index: 3000;
+
+    }
+
+     @media (max-width: 1400px) {
+
+        top: 360px;
+        left: 200px;       
+
+    }
+
+
+      @media (max-width: 950px) {
+
+        top: 340px;
+        left: 190px;
+
+    }
+
+      @media (max-width: 840px) {
+
+        top: 320px;
+
+    }
+
+     @media (max-width: 770px) {
+
+        top: 300px;
+
+    }
+
+     @media (max-width: 690px) {
+
+        top: 280px;
+
+    }
+
+     @media (max-width: 600px) {
+
+        top: 310px;
+        left: 140px;
+
+    }
+
+     @media (max-width: 360px) {
+
+        top: 330px;       
+
+    }
+
+      @media (max-width: 270px) {
+
+        top: 350px;       
+
+    }
 
 `;
 
@@ -69,7 +187,7 @@ function BlogIndexPage({ data }) {
 
        const subject = 'Blog Profesional del Ing. Rafael E. Urbina N.';
 
-       const body = 'Te comparto este Blog que contiene información interesante sobre temas de Auto-aprendizaje y Desarrollo Web, ubicado en:  https://www.rafaelurbinadevpro.com/blog';
+       const body = 'Te comparto este Blog que contiene información interesante sobre temas de Auto-aprendizaje y Desarrollo Web, ubicado en: https://www.rafaelurbinadevpro.com/blog';
 
     return (
         <IndexLayout selectedIndex={1}>             
@@ -97,8 +215,8 @@ export const pageQuery = graphql`
           category
           headerImage {
                         childImageSharp {
-                            fixed(width:200) {
-                                ...GatsbyImageSharpFixed
+                            fluid(maxWidth:200) {
+                                ...GatsbyImageSharpFluid
                             }
                         }
 

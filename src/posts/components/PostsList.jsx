@@ -25,6 +25,37 @@ const StyledContainer = styled.div`
     gap: 20px 20px;
 
 
+    @media (max-width: 1700px) {
+
+        padding: 100px 0 20px 0;
+
+    }
+
+    @media (max-width: 1400px) {
+
+        padding: 100px 20px 20px 20px;
+
+    }
+
+     @media (max-width: 800px) {
+
+        grid-template-areas: 
+            "item item"
+            "item item";
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+      @media (max-width: 500px) {
+
+        grid-template-areas: 
+            "item"
+            "item";
+
+        grid-template-columns: 1fr;
+    }
+
+
 `;
 
 

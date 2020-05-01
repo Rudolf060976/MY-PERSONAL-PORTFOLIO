@@ -95,6 +95,8 @@ const StyledLI = styled.li`
 
     width: 100%;
 
+    line-height: 24px;
+
      @media (max-width: 600px) {
 
         font-size: 16px;

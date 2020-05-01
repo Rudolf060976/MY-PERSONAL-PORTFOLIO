@@ -18,6 +18,12 @@ const StyledContainer = styled.div`
 
     padding: 50px 10px 30px 0;
 
+    @media (max-width: 600px) {
+
+        padding-top: 30px;
+
+    }
+
 `;
 
 const StyledCenter = styled.div`
@@ -30,27 +36,23 @@ const StyledCenter = styled.div`
 
     align-items: center;
 
-     @media (max-width: 2100px) {
+   
+
+     @media (max-width: 1200px) {
 
         width: 60%;
 
     }
 
-     @media (max-width: 1800px) {
+     @media (max-width: 900px) {
 
         width: 70%;
 
     }
 
-     @media (max-width: 1500px) {
+      @media (max-width: 700px) {
 
-        width: 80%;
-
-    }
-
-     @media (max-width: 1100px) {
-
-        width: 90%;
+        width: 75%;
 
     }
     

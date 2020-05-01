@@ -27,9 +27,11 @@ const StyledH1 = styled.h1`
 
     font-size: 3.2rem;
 
-    color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
+    color: ${props => rgba(props.theme.colorMainBlueDark3, 0.9)};
 
     padding: 30px 0;
+
+    width: 100%;
 
     ${AutoLink}
 `;
@@ -49,9 +51,11 @@ const StyledH2 = styled.h2`
 
     font-size: 2.8rem;
 
-    color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
+    color: ${props => rgba(props.theme.colorMainBlueDark3, 0.9)};
 
     padding: 20px 0;
+
+    width: 100%;
 
     ${AutoLink}
 
@@ -78,9 +82,11 @@ const StyledH3 = styled.h3`
 
     font-size: 2.6rem;
 
-    color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
+    color: ${props => rgba(props.theme.colorMainBlueDark3, 0.9)};
 
     padding: 20px 0;
+
+    width: 100%;
 
     ${AutoLink}
 
@@ -105,9 +111,11 @@ const StyledH4 = styled.h4`
 
     font-size: 2.4rem;
 
-    color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
+    color: ${props => rgba(props.theme.colorMainBlueDark3, 0.9)};
 
     padding: 20px 0;
+
+    width: 100%;
 
     ${AutoLink}
 
@@ -133,9 +141,11 @@ const StyledH5 = styled.h5`
 
     font-size: 2.2rem;
 
-    color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
+    color: ${props => rgba(props.theme.colorMainBlueDark3, 0.9)};
 
     padding: 20px 0;
+
+    width: 100%;
 
     ${AutoLink}
 
@@ -160,9 +170,11 @@ const StyledH6 = styled.h6`
 
     font-size: 2rem;
 
-    color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
+    color: ${props => rgba(props.theme.colorMainBlueDark3, 0.9)};
 
     padding: 20px 0;
+
+    width: 100%;
 
     ${AutoLink}
 

@@ -14,6 +14,16 @@ const StyledP = styled.p`
 
     padding: 10px 0;
 
+    width: 100%;
+
+    line-height: 24px;
+    
+     @media (max-width: 600px) {
+
+        font-size: 16px;
+
+    }
+
 `;
 
 export function P({ children }) {
@@ -41,6 +51,11 @@ const StyledA = styled.a`
 
     }
 
+     @media (max-width: 600px) {
+
+        font-size: 16px;
+
+    }
 
 `;
 
@@ -52,6 +67,21 @@ export function A({ children, ...props }) {
     )
 }
 
+const StyledUL = styled.ul`
+
+    width: 100%;
+
+    padding: 20px 0 20px 30px;
+
+`;
+
+export function UL({ children, ...props }) {
+    return (
+        <StyledUL {...props}>
+            { children }
+        </StyledUL>
+    )
+}
 
 const StyledLI = styled.li`
 
@@ -62,6 +92,14 @@ const StyledLI = styled.li`
     color: ${props => rgba(props.theme.colorMainBlueDark2, 0.9)};
 
     padding: 10px 0;
+
+    width: 100%;
+
+     @media (max-width: 600px) {
+
+        font-size: 16px;
+
+    }
 
 `;
 
@@ -149,6 +187,8 @@ const StyledLanguageName = styled.span`
 const StyledPRE = styled.pre`
 
     position: relative;
+
+    width: 100%;
 
 `;
 

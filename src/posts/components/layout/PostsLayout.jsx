@@ -24,62 +24,47 @@ const StyledFacebookButton = styled(FacebookButton)`
     top: 380px;
     left: 100px;
 
-     @media (max-width: 1700px) {
+     @media (max-width: 1050px) {
 
-        top: 360px;
-        left: 300px;
+        top: 240px;
+        left: 180px;
         z-index: 3000;
 
     }
 
-     @media (max-width: 1400px) {
+     @media (max-width: 950px) {
 
-        top: 360px;
-        left: 110px;  
-                     
-    }
-
-    @media (max-width: 950px) {
-
-        top: 340px;
-        left: 100px;
-
-    }
-
-     @media (max-width: 840px) {
-
-        top: 320px;
+        left: 160px;
 
     }
 
      @media (max-width: 770px) {
 
-        top: 300px;
+        top: 240px;
+        left: 120px;
 
     }
 
-     @media (max-width: 690px) {
+    @media (max-width: 690px) {
 
-        top: 280px;
+       
+        left: 60px;
 
     }
+
 
      @media (max-width: 600px) {
 
-        top: 410px;
+        top: 320px;
         left: 50px;
 
     }
 
-     @media (max-width: 360px) {
+   
 
-        top: 420px;       
+     @media (max-width: 280px) {
 
-    }
-
-     @media (max-width: 250px) {
-
-        top: 440px;       
+        top: 330px;       
 
     }
 
@@ -92,63 +77,46 @@ const StyledEmailButton = styled(EmailButton)`
     top: 450px;
     left: 100px;
 
-     @media (max-width: 1700px) {
+     @media (max-width: 1050px) {
 
-        top: 360px;
-        left: 390px;
+        top: 240px;
+        left: 250px;
         z-index: 3000;
 
     }
 
-     @media (max-width: 1400px) {
+      @media (max-width: 950px) {
 
-        top: 360px;
-        left: 200px;       
+        left: 230px;
 
     }
 
+      @media (max-width: 770px) {
 
-      @media (max-width: 950px) {
-
-        top: 340px;
+        top: 240px;
         left: 190px;
 
     }
 
-      @media (max-width: 840px) {
+    @media (max-width: 690px) {
 
-        top: 320px;
-
-    }
-
-     @media (max-width: 770px) {
-
-        top: 300px;
-
-    }
-
-     @media (max-width: 690px) {
-
-        top: 280px;
+       
+        left: 130px;
 
     }
 
      @media (max-width: 600px) {
 
-        top: 410px;
-        left: 140px;
+        top: 320px;
+        left: 120px;
 
     }
 
-     @media (max-width: 360px) {
+   
 
-        top: 420px;       
+      @media (max-width: 280px) {
 
-    }
-
-      @media (max-width: 250px) {
-
-        top: 440px;       
+        top: 330px;       
 
     }
 
@@ -210,7 +178,8 @@ const shortcodes ={
     p: Elements.P,
     a: Elements.A,
     li: Elements.LI,
-    pre: Elements.PRE
+    pre: Elements.PRE,
+    ul: Elements.UL
 };
 
 

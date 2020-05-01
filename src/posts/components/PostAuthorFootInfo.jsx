@@ -16,6 +16,8 @@ const StyledContainer = styled.div`
 
     background-color: ${props => rgba(props.theme.colorMainBlueGray,0.2)};
 
+    margin: 30px 0;
+
 `;
 
 const StyledCenter = styled.div`

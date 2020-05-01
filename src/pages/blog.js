@@ -58,14 +58,14 @@ const StyledFacebookButton = styled(FacebookButton)`
 
      @media (max-width: 600px) {
 
-        top: 310px;
+        top: 340px;
         left: 50px;
 
     }
 
      @media (max-width: 360px) {
 
-        top: 330px;       
+        top: 350px;       
 
     }
 
@@ -127,14 +127,14 @@ const StyledEmailButton = styled(EmailButton)`
 
      @media (max-width: 600px) {
 
-        top: 310px;
+        top: 340px;
         left: 140px;
 
     }
 
      @media (max-width: 360px) {
 
-        top: 330px;       
+        top: 350px;       
 
     }
 

@@ -18,6 +18,8 @@ const StyledImage = styled(Img)`
 
     border-radius: 50%;
 
+    min-width: 60px;
+
 
 `;
 
@@ -35,6 +37,24 @@ const StyledAuthorName = styled.p`
     color: ${props => props.theme.colorMainBlueDark3};
     font-weight: bold;
 
+    @media (max-width: 1100px) {
+
+        font-size: 16px;
+
+    }
+
+    @media (max-width: 900px) {
+
+        font-size: 14px;
+
+    }
+
+    @media (max-width: 600px) {
+
+        font-size: 12px;
+
+    }
+
 `;
 
 const StyledDate = styled.p`
@@ -43,6 +63,14 @@ const StyledDate = styled.p`
     font-size: 14px;
     padding: 5px 0;
     color: ${props => props.theme.colorMainBlueDark3};
+
+     @media (max-width: 1100px) {
+
+        font-size: 12px;
+
+    }
+
+    
 
 `;
 

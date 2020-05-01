@@ -24,6 +24,66 @@ const StyledFacebookButton = styled(FacebookButton)`
     top: 380px;
     left: 100px;
 
+     @media (max-width: 1700px) {
+
+        top: 360px;
+        left: 300px;
+        z-index: 3000;
+
+    }
+
+     @media (max-width: 1400px) {
+
+        top: 360px;
+        left: 110px;  
+                     
+    }
+
+    @media (max-width: 950px) {
+
+        top: 340px;
+        left: 100px;
+
+    }
+
+     @media (max-width: 840px) {
+
+        top: 320px;
+
+    }
+
+     @media (max-width: 770px) {
+
+        top: 300px;
+
+    }
+
+     @media (max-width: 690px) {
+
+        top: 280px;
+
+    }
+
+     @media (max-width: 600px) {
+
+        top: 410px;
+        left: 50px;
+
+    }
+
+     @media (max-width: 360px) {
+
+        top: 420px;       
+
+    }
+
+     @media (max-width: 250px) {
+
+        top: 440px;       
+
+    }
+
+
 `;
 
 const StyledEmailButton = styled(EmailButton)`
@@ -31,6 +91,66 @@ const StyledEmailButton = styled(EmailButton)`
     position: absolute;
     top: 450px;
     left: 100px;
+
+     @media (max-width: 1700px) {
+
+        top: 360px;
+        left: 390px;
+        z-index: 3000;
+
+    }
+
+     @media (max-width: 1400px) {
+
+        top: 360px;
+        left: 200px;       
+
+    }
+
+
+      @media (max-width: 950px) {
+
+        top: 340px;
+        left: 190px;
+
+    }
+
+      @media (max-width: 840px) {
+
+        top: 320px;
+
+    }
+
+     @media (max-width: 770px) {
+
+        top: 300px;
+
+    }
+
+     @media (max-width: 690px) {
+
+        top: 280px;
+
+    }
+
+     @media (max-width: 600px) {
+
+        top: 410px;
+        left: 140px;
+
+    }
+
+     @media (max-width: 360px) {
+
+        top: 420px;       
+
+    }
+
+      @media (max-width: 250px) {
+
+        top: 440px;       
+
+    }
 
 
 `;

@@ -30,11 +30,60 @@ const StyledCenter = styled.div`
 
     align-items: center;
 
+     @media (max-width: 2100px) {
+
+        width: 60%;
+
+    }
+
+     @media (max-width: 1800px) {
+
+        width: 70%;
+
+    }
+
+     @media (max-width: 1500px) {
+
+        width: 80%;
+
+    }
+
+     @media (max-width: 1100px) {
+
+        width: 90%;
+
+    }
+    
+
+     @media (max-width: 600px) {
+
+        width: 80%;
+
+        flex-flow: column nowrap;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
 `;
 
 const StyledTitleContainer = styled.div`
 
-    flex: 2 1 80%;
+    flex: 2 1 70%;
+
+    margin-right: 20px;
+
+      @media (max-width: 600px) {
+
+        flex: 1 1 100%;
+        margin-right: 0;
+        padding-top: 20px;
+
+
+    }
+
 
 `;
 
@@ -46,6 +95,14 @@ const StyledTitle = styled.h4`
 
     color: ${props => props.theme.colorMainBlueDark2};
     letter-spacing: 2px;
+    line-height: 4rem;
+
+      @media (max-width: 600px) {
+
+        text-align: center;
+
+
+    }
     
 `;
 
@@ -56,6 +113,15 @@ const StyledImage = styled(Img)`
     flex: 1 1 30%;
 
     max-width: 250px;
+
+    min-width: 150px;
+
+     @media (max-width: 600px) {
+
+        flex: 1 1 100%;
+        order: -1;
+
+    } 
 
 
 `;

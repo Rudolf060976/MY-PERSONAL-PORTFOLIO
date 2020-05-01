@@ -30,6 +30,25 @@ const StyledCenter = styled.div`
 
     padding: 20px 0;
 
+     @media (max-width: 1100px) {
+
+        width: 80%;
+
+    }
+
+     @media (max-width: 800px) {
+
+        width: 90%;
+
+    }
+
+     @media (max-width: 600px) {
+
+        width: 100%;
+        flex-flow: column nowrap;        
+
+    }
+
 `;
 
 const StyledImage = styled(Img)`
@@ -56,6 +75,18 @@ const StyledName = styled.p`
     font-weight: bold;
     padding: 10px 0;
 
+     @media (max-width: 900px) {
+
+        font-size: 14px;    
+
+    }
+
+     @media (max-width: 600px) {
+
+        text-align: center;     
+
+    }
+
 `;
 
 const StyledAbout = styled.p`
@@ -63,6 +94,12 @@ const StyledAbout = styled.p`
     font-family: Roboto, sans-serif, Verdana, Geneva, Tahoma;
     font-size: 14px;
     line-height: 20px;
+
+      @media (max-width: 900px) {
+
+        font-size: 12px;    
+
+    }
 
 `;
 

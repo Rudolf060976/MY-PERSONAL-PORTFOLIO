@@ -61,12 +61,6 @@ const StyledCenter = styled.div`
 
     }
 
-     @media (max-width: 1100px) {
-
-        width: 90%;
-
-    }
-
      @media (max-width: 600px) {
 
         width: 80%;
@@ -90,7 +84,7 @@ const StyledTitleContainer = styled.div`
 
         flex: 1 1 100%;
         margin-right: 0;
-
+        padding-top: 20px;
 
     }
 
@@ -111,6 +105,13 @@ const StyledFeature = styled.p`
         font-size: 1.8rem;
 
     } 
+
+      @media (max-width: 600px) {
+
+        text-align: center;
+
+
+    }
 `;
 
 const StyledTitle = styled.h4`
@@ -122,6 +123,13 @@ const StyledTitle = styled.h4`
     color: white;
     letter-spacing: 2px;
     line-height: 4rem;
+
+      @media (max-width: 600px) {
+
+        text-align: center;
+
+
+    }
 
     
 `;

@@ -174,7 +174,12 @@ module.exports = {
         // Select your language.
         language: `es_VE`,
       },
-    }
-   
-  ],
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `rafael-urbina-blog`
+      }
+    }   
+  ]
 }

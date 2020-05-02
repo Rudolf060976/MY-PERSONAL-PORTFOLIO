@@ -6,6 +6,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link } from 'gatsby';
 import { Link as LocalLink, Events, scrollSpy } from 'react-scroll';
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 import IndexLayout from './IndexLayout';
 import PostHeader from '../PostHeader';
 import './PostsLayout.scss';
@@ -266,19 +267,27 @@ function PostsLayout({ data }) {
         authorImageFixed: postData.frontmatter.authorImage.childImageSharp.fixed
     };
 
+    const disqusConfig = {
+        url: `https://www.rafaelurbinadevpro.com${postData.frontmatter.slug}`,
+        identifier: postData.id,
+        title: postData.frontmatter.title,
+      }
+
     return (
         <IndexLayout selectedIndex={catIndex}>
             <SEO title={postData.frontmatter.title} meta={metaFacebook} description="Blog de Rafael Urbina" />      
             <PostHeader postData={postData} />
                 <div id="post-page-layout-container">
                     <StyledFacebookButton pageSlug={postData.frontmatter.slug} />
-                    <StyledEmailButton subject={subject} body={body} />   
+                    <StyledEmailButton subject={subject} body={body} />                    
                     <MDXProvider components={shortcodes}>
                         <MDXRenderer>
                             {data.mdx.body}
                         </MDXRenderer>
-                    </MDXProvider>
+                    </MDXProvider>                                        
                     <PostAuthorFootInfo authorData={authorData} />
+                    <CommentCount config={disqusConfig} placeholder={'...'} />  
+                    <Disqus config={disqusConfig} />
                 </div>                   
         </IndexLayout>
     );

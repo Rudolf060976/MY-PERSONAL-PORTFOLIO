@@ -58,7 +58,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `viewport`,
           content: "width=device-width, initial-scale=1.0",
-        },
+        },        
+        {
+          charSet="utf-8",
+        }
       ].concat(meta)}
     />
   )

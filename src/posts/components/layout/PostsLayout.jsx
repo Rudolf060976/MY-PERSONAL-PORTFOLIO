@@ -180,7 +180,8 @@ const shortcodes ={
     a: Elements.A,
     li: Elements.LI,
     pre: Elements.PRE,
-    ul: Elements.UL
+    ul: Elements.UL,
+    ol: Elements.OL
 };
 
 

@@ -83,6 +83,22 @@ export function UL({ children, ...props }) {
     )
 }
 
+const StyledOL = styled.ol`
+
+    width: 100%;
+
+    padding: 20px 0 20px 30px;
+
+`;
+
+export function OL({ children, ...props }) {
+    return (
+        <StyledOL {...props}>
+            { children }
+        </StyledOL>
+    )
+}
+
 const StyledLI = styled.li`
 
     font-family: Roboto, sans-serif, Verdana, Geneva, Tahoma;

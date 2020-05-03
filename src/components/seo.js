@@ -36,6 +36,13 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          charSet:"utf-8",
+        },
+        {
+          name: `viewport`,
+          content: "width=device-width, initial-scale=1.0",
+        },        
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -54,14 +61,7 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
-        {
-          name: `viewport`,
-          content: "width=device-width, initial-scale=1.0",
-        },        
-        {
-          charSet="utf-8",
-        }
+        }       
       ].concat(meta)}
     />
   )

@@ -92,7 +92,7 @@ const StyledTitleContainer = styled.div`
 const StyledTitle = styled.h4`
 
     width: 100%;
-    font-family: Montserrat, sans-serif, Verdana, Geneva, Tahoma;
+    font-family: Roboto, sans-serif, Verdana, Geneva, Tahoma;
     font-size: 2.6rem;
 
     color: ${props => props.theme.colorMainBlueDark2};

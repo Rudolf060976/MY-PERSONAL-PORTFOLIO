@@ -27,7 +27,7 @@ const StyledFacebookButton = styled(FacebookButton)`
 
      @media (max-width: 1050px) {
 
-        top: 240px;
+        top: 280px;
         left: 180px;
         z-index: 3000;
 
@@ -41,7 +41,7 @@ const StyledFacebookButton = styled(FacebookButton)`
 
      @media (max-width: 770px) {
 
-        top: 240px;
+        top: 260px;
         left: 120px;
 
     }
@@ -56,16 +56,16 @@ const StyledFacebookButton = styled(FacebookButton)`
 
      @media (max-width: 600px) {
 
-        top: 320px;
+        top: 390px;
         left: 50px;
 
     }
 
    
 
-     @media (max-width: 280px) {
+     @media (max-width: 295px) {
 
-        top: 330px;       
+        top: 410px;       
 
     }
 
@@ -80,7 +80,7 @@ const StyledEmailButton = styled(EmailButton)`
 
      @media (max-width: 1050px) {
 
-        top: 240px;
+        top: 280px;
         left: 250px;
         z-index: 3000;
 
@@ -94,7 +94,7 @@ const StyledEmailButton = styled(EmailButton)`
 
       @media (max-width: 770px) {
 
-        top: 240px;
+        top: 260px;
         left: 190px;
 
     }
@@ -108,16 +108,16 @@ const StyledEmailButton = styled(EmailButton)`
 
      @media (max-width: 600px) {
 
-        top: 320px;
+        top: 390px;
         left: 120px;
 
     }
 
    
 
-      @media (max-width: 280px) {
+      @media (max-width: 295px) {
 
-        top: 330px;       
+        top: 410px;       
 
     }
 

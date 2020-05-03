@@ -191,7 +191,7 @@ function BlogIndexPage({ data }) {
 
     return (
         <IndexLayout selectedIndex={1}>             
-            <SEO title="Blog Home" meta={metaFacebook} description="Blog de Rafael Urbina" />            
+            <SEO title="Blog de Autoaprendizaje y Desarrollo Web" meta={metaFacebook} description="Blog del Ingeniero Rafael Urbina que contiene artículos sobre Desarrollo Web" keywords="Blog Desarrollador Web Venezuela" lang="es" />            
             <Featured /> 
             <StyledFacebookButton pageSlug="/blog" />  
             <StyledEmailButton subject={subject} body={body} />                   

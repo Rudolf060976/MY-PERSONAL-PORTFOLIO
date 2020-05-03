@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
   return (
     <ParallaxProvider>          
         <Layout>
-          <SEO title="Home" />  
+          <SEO title="Full Stack Web developer from Venezuela Ingineer Rafael Urbina" keywords="Blog Web Developer React.js" />  
           <Header siteMetadata={data.site.siteMetadata} />    
           <About />
           <Skills />

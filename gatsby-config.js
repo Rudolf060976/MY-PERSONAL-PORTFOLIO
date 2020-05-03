@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `RAFAEL E. URBINA`,
+    keywords: `desarrollador web venezuela`,
     subtitle: `Full Stack Web Developer`,
     description: `The Web never stops, so why would I have to?`,
-    author: `rafaelurbinan@hotmail.com`,
+    author: `rafaelurbinan@hotmail.com`,    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

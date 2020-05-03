@@ -142,6 +142,7 @@ module.exports = {
         icon: `src/images/rafael-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-styled-components`,

@@ -276,7 +276,7 @@ function PostsLayout({ data }) {
 
     return (
         <IndexLayout selectedIndex={catIndex}>
-            <SEO title={postData.frontmatter.title} meta={metaFacebook} description="Blog de Rafael Urbina" />      
+            <SEO title={postData.frontmatter.title} meta={metaFacebook} description={postData.excerpt} />      
             <PostHeader postData={postData} />
                 <div id="post-page-layout-container">
                     <StyledFacebookButton pageSlug={postData.frontmatter.slug} />
@@ -299,6 +299,7 @@ export const pageQuery = graphql`
     query BlogPostQuery($id: String!) {
         mdx(id: { eq: $id}) {
             id
+            excerpt
             body 
             frontmatter {
                 title

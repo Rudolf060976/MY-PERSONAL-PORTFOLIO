@@ -186,6 +186,8 @@ function Featured() {
         }    
     `);
 
+        
+
     const postData = data.mdx.frontmatter;
 
     const imageData = postData.headerImage.childImageSharp.fluid;

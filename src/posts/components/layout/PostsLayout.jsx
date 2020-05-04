@@ -181,7 +181,8 @@ const shortcodes ={
     li: Elements.LI,
     pre: Elements.PRE,
     ul: Elements.UL,
-    ol: Elements.OL
+    ol: Elements.OL,
+    img: Elements.IMG
 };
 
 

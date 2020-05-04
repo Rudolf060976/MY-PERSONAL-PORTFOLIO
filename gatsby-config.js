@@ -140,7 +140,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/rafael-icon.png`, // This path is relative to the root of the site.
-      },
+      }
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
@@ -148,7 +148,7 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-facebook-analytics`,

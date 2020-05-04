@@ -210,6 +210,22 @@ const StyledPRE = styled.pre`
 
 `;
 
+const StyledImage = styled.img`
+
+    width: 100%;
+
+    border-radius: 10px;
+
+`;
+
+export function IMG({ children, ...props }) {
+    return (
+        <StyledImage {...props}>
+            { children }
+        </StyledImage>
+    )
+}
+
 // ESTE ES EL COMPONENTE PRE QUE PERMITE PERSONALIZAR A LOS BLOQUES DE CODIGO GENERADOS POR EL PLUGIN gatsby-remark-prismjs
 // SE AÑADE LA FUNCIONALIDAD DEL BOTON Copy QUE PERMITE COPIAR EL CONTENIDO DEL PRE AL PORTAPAPELES DE WINDOWS
 

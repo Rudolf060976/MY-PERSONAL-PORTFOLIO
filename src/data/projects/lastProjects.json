@@ -63,6 +63,39 @@
         "githubUrl": "https://github.com/Rudolf060976/CROCKERS-CLIENT-APP"
     },
     {
+        "title": "Nimix1 Software Website",
+        "description": "This is the Nimix1 Software Website. Nimix1 is a retail management system for small to mid-sized businesses. On this website you can see all of the software advantages, register as a client, enter the video tutorials section & read the latest tech news.",
+        "image": "../images/NIMIX1.jpg",
+        "tools": [
+            {
+                "name": "Backend: Netlify CMS"                
+            },
+            {
+                "name": "Gatsby.js (a React.js Library)."                
+            },            
+            {
+                "name": "JSON Web Token for Authentication."
+            },
+            {
+                "name": "CSS3 / SASS / JSX."                
+            },
+            {
+                "name": "React-Fontawesome."
+            },
+            {
+                "name": "Styled Components."
+            },
+            {
+                "name": "Polished Library."
+            },            
+            {
+                "name": "Netlify to Deploy & Netlify CMS for the Backend"
+            }
+        ],
+        "pageUrl": "https://nimix1.netlify.app",
+        "githubUrl": "https://github.com/Rudolf060976/NIMIX-WEBSITE"
+    },
+    {
         "title": "BitZone Online Store",
         "description": "A small ecommerce SPA where you can find and order Items. This is a personal project.",
         "image": "../images/BITZONE.jpg",

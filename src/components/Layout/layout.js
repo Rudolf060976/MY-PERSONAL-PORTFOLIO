@@ -17,15 +17,13 @@ import Footer from "../Footer/Footer";
 const Layout = ({ children }) => {
   
 
-  return (
-    <>
+  return (    
       <ThemeProvider theme={theme} >      
       <div className="main-layout-body">
         <main>{children}</main>
         <Footer />
       </div>
-      </ThemeProvider>    
-    </>
+      </ThemeProvider>   
   )
 }
 

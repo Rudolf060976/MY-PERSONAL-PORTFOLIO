@@ -79,7 +79,8 @@ const StyledGridContainer = styled.div`
     grid-template-areas:
         "area1      area2"
         "area3      area4"
-        "area5      area6";
+        "area5      area6"
+        "area7      area8";
 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 42rem);
@@ -139,7 +140,9 @@ const StyledGridContainer = styled.div`
         "area4"
         "area3"
         "area5"
-        "area6";
+        "area6"
+        "area8"
+        "area7";
 
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 46rem);
@@ -235,7 +238,9 @@ function ProjectsContent() {
 
     const restaurant = projectsArray[1];
 
-    const bitzone = projectsArray[2];
+    const nimix = projectsArray[2];
+
+    const bitzone = projectsArray[3];
 
 
     return (
@@ -247,8 +252,12 @@ function ProjectsContent() {
                 <ProjectDataItem gridArea={'area2'} data={portFolio} play={play} animDelay={'200ms'} buttonsDelay={'1.5s'} />
                 <ProjectDataItem gridArea={'area3'} data={restaurant} play={play} animDelay={'2s'} buttonsDelay={'3.2s'} />
                 <ProjectImageItem gridArea={'area4'} image={restaurant.image.childImageSharp.fluid} play={play} animDelay={'1.7s'} />
-                <ProjectImageItem gridArea={'area5'} image={bitzone.image.childImageSharp.fluid} play={play} animDelay={'3.3s'} />
-                <ProjectDataItem gridArea={'area6'} data={bitzone} play={play} animDelay={'3.8s'} buttonsDelay={'5.1s'} />
+                <ProjectImageItem gridArea={'area5'} image={nimix.image.childImageSharp.fluid} play={play} animDelay={'3.3s'} />
+                <ProjectDataItem gridArea={'area6'} data={nimix} play={play} animDelay={'3.8s'} buttonsDelay={'5.1s'} />
+                <ProjectDataItem gridArea={'area7'} data={bitzone} play={play} animDelay={'5.3s'} buttonsDelay={'6.5s'} />
+                <ProjectImageItem gridArea={'area8'} image={bitzone.image.childImageSharp.fluid} play={play} animDelay={'5s'} />
+
+                
             </StyledGridContainer>       
         </StyledContentContainer>
         </>

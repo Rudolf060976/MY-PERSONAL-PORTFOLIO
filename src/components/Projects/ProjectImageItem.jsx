@@ -76,6 +76,8 @@ const StyledContainer = styled.div`
 
     position: relative;
 
+    padding: 40px 0;
+
    &::before {
 
         content: '';
@@ -139,9 +141,8 @@ const StyledImage = styled(Image)`
 
     width: 100%;
     max-width: 700px; 
-
-   
-       
+    
+    border-radius: 10px;      
            
         &:hover {
            

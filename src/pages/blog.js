@@ -157,7 +157,7 @@ function BlogIndexPage({ data }) {
 
         const today = moment();
 
-        return (postDate.add(7,"days").format("X") >= today.format("X"));  // SOLO SELECCIONA LOS POSTS DE LOS ULTIMOS 7 DIAS
+        return (postDate.add(30,"days").format("X") >= today.format("X"));  // SOLO SELECCIONA LOS POSTS DE LOS ULTIMOS 7 DIAS
     });
 
     const metaFacebook = [

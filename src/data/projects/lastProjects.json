@@ -5,7 +5,7 @@
         "image": "../images/PORTFOLIO.jpg",
         "tools": [
             {
-                "name": "Gatsby.js (a React.js Library)."                
+                "name": "Gatsby.js (a React.js Framework)."                
             },
             {
                 "name": "CSS3 / SASS / JSX."                
@@ -38,7 +38,7 @@
                 "name": "Backend: Node, Express, Apollo Server, MongoDB, Mongoose."                
             },            
             {
-                "name": "JSON Web Token for Authentication."
+                "name": "Manual Authentication using Apollo Server & JSON Web Token."
             },
             {
                 "name": "CSS3 / SASS / JSX."                
@@ -71,10 +71,10 @@
                 "name": "Backend: Netlify CMS"                
             },
             {
-                "name": "Gatsby.js (a React.js Library)."                
+                "name": "Gatsby.js (a React.js Framework)."                
             },            
             {
-                "name": "JSON Web Token for Authentication."
+                "name": "Auth0 Authentication."
             },
             {
                 "name": "CSS3 / SASS / JSX."                

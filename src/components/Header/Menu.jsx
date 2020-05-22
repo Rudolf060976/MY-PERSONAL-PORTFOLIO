@@ -84,6 +84,7 @@ const StyledList = styled.ul`
     align-items: center;
 
     list-style-type: none;
+   
     
     @media (max-width: 2200px) {
 
@@ -108,6 +109,7 @@ const StyledList = styled.ul`
         width: 50%;
 
         flex-flow: column nowrap;
+        
 
     }
 

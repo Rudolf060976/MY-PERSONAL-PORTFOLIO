@@ -13,7 +13,7 @@ import { Link as LinkG } from 'gatsby';
 const animationOpen = keyframes`
 
     from {
-        transform: translateY(-260px);
+        transform: translateY(-500px);
 
     }
 
@@ -31,7 +31,7 @@ const animationClose = keyframes`
     }
 
     to {
-        transform: translateY(-280px);
+        transform: translateY(-500px);
     }
 
 `;
@@ -66,10 +66,11 @@ const StyledContainer = styled.nav`
         padding: 0;
         z-index: 1000;
         background-color: ${props => rgba(props.theme.colorMainBlueDark2,.9)};
-        transform: translateY(-280px);     
+        transform: translateY(-500px);     
         animation-name: ${props => props.openMenu ? animationOpen : ( props.closeMenu ? animationClose : null ) };
         animation-duration: .5s; 
-        animation-fill-mode: forwards;   
+        animation-fill-mode: forwards; 
+        padding: 50px 0 40px 0;  
                
     }   
 
@@ -118,7 +119,7 @@ const StyledList = styled.ul`
 
          @media (max-width: 600px) {
 
-            transform: scale(1.2);           
+            transform: scale(1.2);                    
 
         }
 
@@ -134,7 +135,8 @@ const StyledList = styled.ul`
 
         @media (max-width: 600px) {
 
-            transform: scale(1.3);           
+            transform: scale(1.3); 
+                   
 
         } 
       
@@ -145,7 +147,9 @@ const StyledList = styled.ul`
         @media (max-width: 600px) {
 
             transform: scale(1.2);
-            background-color: ${props => props.theme.colorMainBlueClear2};
+                    
+
+            
 
         }
 
@@ -162,8 +166,9 @@ const StyledListItem = styled.li`
 
     @media (max-width: 600px) {
 
-        width: 50%;
-
+        width: 80%;
+        padding: 7px 0;        
+        
     }
    
 `;
@@ -185,9 +190,13 @@ const StyledGatsbyLink = styled(LinkG)`
     
     @media (max-width: 600px) {
 
-        padding: 10px 10px;
+        padding: 15px 10px;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.6rem;
+        background-color: ${props => props.theme.colorMainBlueClear1};  
+        color: ${props => props.theme.colorMainWhite};
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px white;
 
     }
     
@@ -235,8 +244,11 @@ const StyledLink = styled(Link)`
 
         padding: 15px 10px;
         text-align: center;
-        font-size: 2rem;
-
+        font-size: 2.6rem;
+        background-color: ${props => props.theme.colorMainBlueClear1};  
+        color: ${props => props.theme.colorMainWhite};
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px white;
     }
     
     &::before {
@@ -270,23 +282,26 @@ const StyledLink = styled(Link)`
 const StyledCloseButton = styled.span`
 
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 5%;
+    top: 3%;
     display: none;
-    color: $Main-Blue-Gray;
+    color: ${props => props.theme.colorMainBlueGray };    
+    transition: all .3s linear;
 
     @media (max-width: 600px) {
 
-        display: inline-block;
+        display: inline-block;        
         padding: 15px 20px;        
         font-size: 2.4rem;        
         z-index: 100;
+        font-size: 22px;
     }
+
+
 
     &:active {
 
-        border: ${props => props.theme.colorMainBlueClear2} solid 1px;
-        border-radius: 5px;
+        transform: scale(1.6) rotate(90deg);
 
     }
 

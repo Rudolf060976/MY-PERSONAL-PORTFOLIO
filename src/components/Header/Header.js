@@ -35,20 +35,7 @@ const Header = ({ siteMetadata }) => {
     <header id="masthead">
       { openMenu ? null : menuIcon() }    
       <Menu openMenu={openMenu} handleCloseMenu={handleCloseMenuClick} />
-      <Content siteMetadata={siteMetadata} />
-      <div id="header-animation-area">
-        <ul id="header-box-animation-area" >
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>               
-        </ul>  
-      </div>  
+      <Content siteMetadata={siteMetadata} />      
     </header>
   );
   

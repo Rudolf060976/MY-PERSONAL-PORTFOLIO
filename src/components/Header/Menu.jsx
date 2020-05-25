@@ -53,6 +53,9 @@ const StyledContainer = styled.nav`
 
     position: fixed;
 
+    top: 0;
+    left: 0;
+
     z-index: 5000;
 
     @media (max-width: 1100px) {
@@ -62,7 +65,9 @@ const StyledContainer = styled.nav`
     }
 
     @media (max-width: 600px) {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left:0;
         padding: 0;
         z-index: 1000;
         background-color: ${props => rgba(props.theme.colorMainBlueDark2,.9)};

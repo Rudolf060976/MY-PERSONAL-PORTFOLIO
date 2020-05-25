@@ -3,7 +3,7 @@ module.exports = {
     title: `RAFAEL E. URBINA`,
     keywords: `desarrollador web venezuela`,
     subtitle: `Full Stack Web Developer`,
-    description: `The Web never stops, so why would I have to?`,
+    description: `RAFAEL E. URBINA N.`,
     author: `rafaelurbinan@hotmail.com`,    
   },
   plugins: [

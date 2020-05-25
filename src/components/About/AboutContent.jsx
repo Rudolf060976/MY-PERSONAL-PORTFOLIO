@@ -172,6 +172,8 @@ const StyledTitleContainer = styled.div`
 
     padding: 40px 0;
 
+    padding-bottom: 70px;
+
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma; 
     
     font-size: 4.4rem;
@@ -218,7 +220,7 @@ const StyledTitleSpan = styled.span`
 
     position: absolute;
     
-    top: 50%;
+    top: 40%;
 
     left: 0;
 
@@ -465,7 +467,7 @@ const StyledCenter = styled.div`
 
         padding: 30px 10px;
 
-        grid-template-columns: 150px 150px;
+        grid-template-columns: 140px 140px;
 
     }
 
@@ -473,7 +475,7 @@ const StyledCenter = styled.div`
 
         padding: 30px 5px;
 
-        grid-template-columns: 130px 130px;
+        grid-template-columns: 1fr 1fr;
 
     }
   
@@ -490,7 +492,9 @@ const StyledContentTitle = styled.h5`
 
     letter-spacing: 1px;
 
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+
+    line-height: 3rem;
 
     transform: translateY(30px);
 
@@ -501,6 +505,31 @@ const StyledContentTitle = styled.h5`
     animation-fill-mode: forwards;
 
     animation-delay: 2.4s;
+
+
+     @media (max-width: 1700px ) {
+
+        line-height: 3.2rem;
+
+    }
+
+     @media (max-width: 1200px ) {
+
+        line-height: 3.4rem;
+
+    }
+
+     @media (max-width: 900px ) {
+
+        line-height: 3.6rem;
+
+    }
+
+     @media (max-width: 500px ) {
+
+        line-height: 3.8rem;
+
+    }
 
 
     @media (max-width: 450px ) {
@@ -533,31 +562,31 @@ const StyledContentDataP = styled.p`
 
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
 
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
-    line-height: 2rem;
+    line-height: 2.4rem;
 
     @media (max-width: 1100px ) {
 
-        font-size: 1.6rem;
+        font-size: 1.8rem;
 
-        line-height: 2.2rem;
+        line-height: 2.6rem;
 
     }
 
     @media (max-width: 750px ) {
 
-        font-size: 1.8rem;
+        font-size: 2rem;
 
-        line-height: 2.4rem;
+        line-height: 2.8rem;
 
     }
 
-    @media (max-width: 450px ) {
+    @media (max-width: 500px ) {
 
-        font-size: 2rem;
+        font-size: 2.2rem;
 
-        line-height: 2.6rem;
+        line-height: 3.2rem;
 
         padding: 5px 0;
 

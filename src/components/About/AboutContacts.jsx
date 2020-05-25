@@ -6,7 +6,7 @@ import { rgba } from 'polished';
 const StyledContainer = styled.div`
 
    padding: 10px;
-
+   
    grid-area: contact;
 
 `;
@@ -24,7 +24,6 @@ const StyledList = styled.ul`
     justify-content: space-between;
 
     list-style-type: none;
-
     
 
 `;
@@ -47,6 +46,9 @@ const StyledContactName =styled.span`
 
     letter-spacing: 1px;
 
+    line-height: 18px;
+
+    
     @media (max-width: 1400px) {
 
         font-size: 1.2rem;
@@ -54,9 +56,23 @@ const StyledContactName =styled.span`
 
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 1400px) {
 
         font-size: 1.4rem;
+
+
+    }
+
+    @media (max-width: 950px) {
+
+        font-size: 1.6rem;
+
+
+    }
+
+    @media (max-width: 500px) {
+
+        font-size: 1.8rem;
 
 
     }

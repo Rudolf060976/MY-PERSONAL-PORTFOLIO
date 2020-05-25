@@ -52,8 +52,7 @@ const StyledContainer = styled.section` /* TUVO QUE SER NECESARIO ESTE CONTAINER
 
 function About() {
     return (
-        <StyledContainer id="about-scroll-point">
-                   
+        <StyledContainer id="about-scroll-point">                   
             <StyledBackgroundSection>                 
                 <AboutContent />
             </StyledBackgroundSection>

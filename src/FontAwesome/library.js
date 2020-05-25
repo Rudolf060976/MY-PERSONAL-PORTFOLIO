@@ -4,7 +4,12 @@ import {
     faBars,
     faAlignJustify,
     faTimes,
-    faEnvelope               
+    faEnvelope,
+    faIdCard,
+    faBriefcase,
+    faPhone,
+    faHome
+                   
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -16,7 +21,8 @@ import {
     faFacebookSquare,
     faFacebook,
     faFacebookF
+
 } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faBars, faAlignJustify, faTimes, faEnvelope, faLinkedin, faLinkedinIn,faGithub, faGithubSquare, faSkype, faFacebook, faFacebookF, faFacebookSquare);
+library.add(faBars, faAlignJustify, faTimes, faEnvelope, faLinkedin, faLinkedinIn,faGithub, faGithubSquare, faSkype, faFacebook, faFacebookF, faFacebookSquare, faIdCard, faBriefcase, faPhone, faHome);
 

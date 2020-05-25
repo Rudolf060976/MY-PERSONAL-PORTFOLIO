@@ -314,7 +314,7 @@ function Content({ siteMetadata }) {
         <StyledContainer>
             <StyledCenter>
                 <StyledAnimatedTitle>
-                    <TypeWriterAnimatedTitle contentArray={contentArray} waitAfterWordInMiliseconds={100} typeSpeedInMiliseconds={100} deleteSpeedInMiliseconds={50} waitAfterPhraseInMiliseconds={2000} />
+                    <TypeWriterAnimatedTitle contentArray={contentArray} waitAfterWordInMiliseconds={100} typeSpeedInMiliseconds={100} deleteSpeedInMiliseconds={20} waitAfterPhraseInMiliseconds={2000} />
                 </StyledAnimatedTitle>                
                 <StyledTitlesContainer>
                     <StyledTitlesCenter>

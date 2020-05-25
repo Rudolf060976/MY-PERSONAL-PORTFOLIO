@@ -192,7 +192,7 @@ const StyledTitlesCenter = styled.div`
 
      @media (max-width: 400px) {
 
-        padding: 20px 10px;
+        padding: 10px 10px;
 
     }    
     

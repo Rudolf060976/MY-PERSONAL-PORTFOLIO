@@ -295,7 +295,7 @@ const StyledAnimatedTitle = styled.h2`
 
       @media (max-width: 500px) {
 
-        height: 240px;
+        height: 210px;
 
         line-height: 34px;  
         

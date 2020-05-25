@@ -81,13 +81,7 @@ const StyledLinkComponent = styled(Link)`
 
     }
 
-    &:active {
-
-        background-color: ${props => rgba(props.theme.colorGreenLight2, 0.8)};
-
-        cursor: pointer;
-
-    }
+    
 
 `;
 

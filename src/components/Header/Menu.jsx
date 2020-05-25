@@ -52,7 +52,7 @@ const StyledContainer = styled.nav`
     align-items: center;
 
     position: fixed;
-
+    
     top: 0;
     left: 0;
 

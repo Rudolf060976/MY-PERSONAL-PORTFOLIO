@@ -74,8 +74,14 @@ const StyledContainer = styled.div`
        
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
+    @media (max-width: 600px) {
+
+
+        margin-top: -60px;
+
+    }
     
 `;
 
@@ -89,6 +95,7 @@ const StyledCenter = styled.div`
 
     position: relative;
 
+    
     
      @media (max-width: 1100px) {
 
@@ -258,7 +265,7 @@ const StyledAnimatedTitle = styled.h2`
     text-align: center;
 
     line-height: 80px;  
-
+    
     
      @media (max-width: 1300px) {
 
@@ -290,7 +297,7 @@ const StyledAnimatedTitle = styled.h2`
 
         height: 240px;
 
-        line-height: 44px;  
+        line-height: 34px;  
         
         padding: 30px 0 30px 0;
 

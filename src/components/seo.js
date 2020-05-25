@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title, keywords }) {
         },
         {
           name: `viewport`,
-          content: "width=device-width, initial-scale=1.0",
+          content: "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi",
         },        
         {
           name: `description`,

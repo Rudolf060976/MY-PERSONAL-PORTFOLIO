@@ -6,7 +6,7 @@ import { Link, Events, scrollSpy } from 'react-scroll';
 
 const StyledContainer = styled.nav`
 
-    display: none;
+    visibility: hidden;
 
     position: fixed;
 
@@ -23,11 +23,13 @@ const StyledContainer = styled.nav`
     
     @media (max-width: 600px ) {
 
-        display: block;         
+        visibility: visible;
 
         background-color: ${props => rgba(props.theme.colorGreenDark, 0.8)};
 
         //border-top: 1px solid white;
+
+        
 
     }
 

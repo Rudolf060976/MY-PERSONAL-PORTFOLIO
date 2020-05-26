@@ -139,7 +139,7 @@ const StyledAddress = styled.p`
     text-align: center;
     color: ${props => props.theme.colorMainBlueGray};
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 2px;
 
     padding: 20px 0 10px 0;
@@ -151,7 +151,7 @@ const StyledPhone = styled.p`
     text-align: center;
     color: ${props => props.theme.colorMainBlueGray};
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     padding: 10px 0;
 
@@ -167,7 +167,7 @@ const StyledEmailContainer = styled.p`
     text-align: center;
     color: ${props => props.theme.colorMainBlueGray};
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 10px 0;
     letter-spacing: 2px;
 
@@ -199,9 +199,9 @@ const StyledEmail = styled.a`
 const StyledDownloadLinkContainer = styled.p`
 
     text-align: center;
-    color: ${props => props.theme.colorMainBlueGray};
+    
     font-family: Rubik, sans-serif, Verdana, Geneva, Tahoma;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 30px 0;
     letter-spacing: 2px;
 
@@ -216,7 +216,7 @@ const StyledDownloadLink = styled.a`
 
     text-decoration: underline;
 
-    color: ${props => props.theme.colorMainBlueClear2};
+    color: ${props => props.theme.colorMainWhite};
 
     transition: all .3s linear;
 

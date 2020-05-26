@@ -83,7 +83,7 @@ const StyledGridContainer = styled.div`
         "area7      area8";
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 42rem);
+    grid-template-rows: repeat(3, 54rem);
 
     gap: 0;
 
@@ -101,36 +101,62 @@ const StyledGridContainer = styled.div`
 
     }
 
-     @media (max-width: 1300px) {
+     @media (max-width: 1670px) {
 
-        grid-template-rows: repeat(3, 46rem);
+        grid-template-rows: repeat(3, 58rem);
 
 
     }
 
-     @media (max-width: 1200px) {
+      @media (max-width: 1400px) {
+
+        grid-template-rows: repeat(3, 62rem);
+
+
+    }
+
+     @media (max-width: 1350px) {
+
+        grid-template-rows: repeat(3, 64rem);
+
+
+    }
+
+     @media (max-width: 1300px) {
 
         width: 90%;
 
 
     }
 
-     @media (max-width: 950px) {
+     @media (max-width: 1100px) {
 
-        grid-template-rows: repeat(3, 50rem);
+        grid-template-rows: repeat(3, 68rem);
 
 
     }
 
-     @media (max-width: 820px) {
+     @media (max-width: 950px) {
 
-        grid-template-rows: repeat(3, 52rem);
+        grid-template-rows: repeat(3, 70rem);
 
         width: 100%;
 
     }
 
-     @media (max-width: 700px) {
+     @media (max-width: 900px) {
+
+        grid-template-rows: repeat(3, 74rem);
+
+    }
+
+     @media (max-width: 800px) {
+
+        grid-template-rows: repeat(3, 78rem);
+
+    }
+
+     @media (max-width: 750px) {
 
         width: 90%;
 
@@ -145,26 +171,13 @@ const StyledGridContainer = styled.div`
         "area7";
 
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 46rem);
+        grid-template-rows: repeat(6,auto);
 
         gap: 30px 0;
 
 
     }
-
-    @media (max-width: 500px) {
-
-        width: 100%;
-
-    }
-
-     @media (max-width: 370px) {
-
-        grid-template-rows: repeat(6, 50rem);
-
-    }
-
-   
+  
 
 `;
 

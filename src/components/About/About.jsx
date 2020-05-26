@@ -24,30 +24,40 @@ const BackgroundSection = ({ className, children, id }) => {
     const imageData = data.desktop.childImageSharp.fluid;
 
     return (
-        <BackgroundImage Tag="section" className={className} fluid={imageData} backgroundColor={'#1D2F40'} id={id}>
+        <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#1D2F40'} id={id} >
             {children}
         </BackgroundImage>
     );
 };
 
-const StyledContainer = styled(BackgroundSection)`
+
+
+const StyledBackground = styled(BackgroundSection)`
 
     width: 100%;
-    
-    padding: 80px 10px 150px 10px;
    
-    z-index: -1;
+    padding: 80px 10px 150px 10px; 
+       
 
-    /* border-bottom: 1px solid ${props => props.theme.colorMainBlueGray}; */
   
-   
+`;
+
+const StyledContainer = styled.div`
+
+    width: 100%;
+
+    z-index: 90;
+
+
 `;
 
 
 function About() {
     return (
-        <StyledContainer id="about-scroll-point">                        
-                <AboutContent />           
+        <StyledContainer id="about-scroll-point"> 
+            <StyledBackground>
+                <AboutContent />  
+            </StyledBackground>                                    
         </StyledContainer>        
     );
 }

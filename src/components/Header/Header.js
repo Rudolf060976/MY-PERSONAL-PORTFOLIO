@@ -28,7 +28,7 @@ const BackgroundSection = ({ className, children, id }) => {
   const imageData = data.desktop.childImageSharp.fluid;
 
   return (
-      <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#000000'} id={id}>
+      <BackgroundImage Tag="section" className={className} fluid={imageData} backgroundColor={'#000000'} id={id}>
           {children}
       </BackgroundImage>
   );
@@ -58,7 +58,10 @@ const StyledContainer = styled(BackgroundSection)`
     justify-content: center;
 
     align-items: center;
-    
+
+    z-index: 100;
+
+        
 `;
 
 
@@ -88,7 +91,7 @@ const Header = ({ siteMetadata }) => {
     top: 20px;
     display: none;
     color: $mainWhite;    
-    background-color: $Main-Blue-Clear1;
+    background-color: ${props => props.theme.colorMainBlueClear1};
     border-radius: 5px;
 
     box-shadow: 0px 0px 5px white;;
@@ -105,7 +108,7 @@ const Header = ({ siteMetadata }) => {
         display: inline-block;
         padding: 10px;        
         @include fontSize(2.2); 
-        z-index: 1000;
+        z-index: 10000;
      
     }
 

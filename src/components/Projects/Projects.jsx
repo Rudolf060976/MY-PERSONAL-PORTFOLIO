@@ -18,7 +18,7 @@ const StyledContainer = styled.section`
 
     position: relative;
 
-    z-index: -1;
+    z-index: 90;
 
 `;
 

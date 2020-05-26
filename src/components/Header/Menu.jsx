@@ -54,9 +54,9 @@ const StyledContainer = styled.nav`
     top: 0;
     left: 0;
     
-    z-index: 50000;
+    z-index: 500;
 
-        
+            
 
     @media (max-width: 1100px) {
 

@@ -38,7 +38,9 @@ const StyledContainer = styled(BackgroundSection)`
 
     height: 150rem; 
 
-    z-index: -10;
+    position: relative;
+
+    z-index: 90;
 
     @media (max-width: 510px) {
 

@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 
 import LetsTalkContent from './LetsTalkContent';
 
-const BackgroundSection = ({ className, children }) => {
+const BackgroundSection = ({ className, children, id }) => {
 
     const data = useStaticQuery(graphql`
         query {
@@ -22,13 +22,13 @@ const BackgroundSection = ({ className, children }) => {
     const imageData = data.desktop.childImageSharp.fluid;
 
     return (
-        <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#1D2F40'}>
+        <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#1D2F40'} id={id}>
             {children}
         </BackgroundImage>
     );
 };
 
-const StyledBackgroundSection = styled(BackgroundSection)`
+const StyledContainer = styled(BackgroundSection)`
 
     width: 100%;
    
@@ -38,37 +38,20 @@ const StyledBackgroundSection = styled(BackgroundSection)`
 
     height: 150rem; 
 
-    @media (max-width: 510px) {
-
-        height: 250rem; 
-
-    }
-
-`;
-
-
-const StyledContainer = styled.section`
-
-    width: 100%;
-
-    background-color: ${props => props.theme.colorMainBlueDark2};   
-
-    height: 150rem;
+    z-index: -10;
 
     @media (max-width: 510px) {
 
         height: 250rem; 
 
     }
-           
+
 `;
 
 function LetsTalk() {
     return (
-        <StyledContainer id="contact-scroll-point">            
-            <StyledBackgroundSection>                
-                <LetsTalkContent />
-            </StyledBackgroundSection>                    
+        <StyledContainer id="contact-scroll-point">                 
+                <LetsTalkContent />                   
         </StyledContainer>
     );
 }

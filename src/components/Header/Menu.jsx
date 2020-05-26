@@ -50,13 +50,13 @@ const StyledContainer = styled.nav`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
-    position: fixed;
-    
+    position: fixed;    
     top: 0;
     left: 0;
+    
+    z-index: 50000;
 
-    z-index: 5000;
+        
 
     @media (max-width: 1100px) {
 

@@ -15,7 +15,11 @@ const StyledContainer = styled.section`
     padding: 50px 10px 100px 10px;   
 
     border-bottom: 1px solid ${props => rgba(props.theme.colorMainBlueGray, .5)};
-   
+
+    position: relative;
+
+    z-index: -1;
+
 `;
 
 function Projects() {

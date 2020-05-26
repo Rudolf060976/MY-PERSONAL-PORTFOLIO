@@ -78,6 +78,9 @@ const StyledContainer = styled.div`
 
     padding: 40px 0;
 
+    
+    
+
    &::before {
 
         content: '';
@@ -93,7 +96,7 @@ const StyledContainer = styled.div`
         height: 0;
 
         width: 0;
-        
+                
         background-color: ${props => rgba(props.theme.colorMainBlueClear2,0.4)};
 
         animation-name: ${props => props.play ? backAnimation : 'none'};
@@ -113,9 +116,12 @@ const StyledContainer = styled.div`
 const StyledImageContainer = styled.div`  /*  ESTA ES UNA PRUEBA */
 
    width: 80%;
-   overflow: hidden;
-   border-radius: 10px; 
 
+   overflow: hidden;
+
+   border-radius: 10px; 
+   
+   
    @media (max-width: 700px) {
 
         width: 70%;
@@ -142,7 +148,9 @@ const StyledImage = styled(Image)`
     width: 100%;
     max-width: 700px; 
     
-    border-radius: 10px;      
+    border-radius: 10px;  
+    
+    
            
         &:hover {
            

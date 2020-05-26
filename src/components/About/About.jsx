@@ -7,7 +7,7 @@ import BackgroundImage from 'gatsby-background-image';
 import AboutContent from './AboutContent';
 
 
-const BackgroundSection = ({ className, children }) => {
+const BackgroundSection = ({ className, children, id }) => {
 
     const data = useStaticQuery(graphql`
         query {
@@ -24,38 +24,30 @@ const BackgroundSection = ({ className, children }) => {
     const imageData = data.desktop.childImageSharp.fluid;
 
     return (
-        <BackgroundImage Tag="div" className={className} fluid={imageData} backgroundColor={'#1D2F40'}>
+        <BackgroundImage Tag="section" className={className} fluid={imageData} backgroundColor={'#1D2F40'} id={id}>
             {children}
         </BackgroundImage>
     );
 };
 
-const StyledBackgroundSection = styled(BackgroundSection)`
+const StyledContainer = styled(BackgroundSection)`
 
     width: 100%;
     
     padding: 80px 10px 150px 10px;
-
+   
+    z-index: -1;
 
     /* border-bottom: 1px solid ${props => props.theme.colorMainBlueGray}; */
   
    
 `;
 
-const StyledContainer = styled.section` /* TUVO QUE SER NECESARIO ESTE CONTAINER PORQUE SE VEIA EL BACKGROUND DE SKILLS DETRAS DEL BACKGROUND DE ESTA SECCION */
-
-    width: 100%;
-
-    background-color: ${props => props.theme.colorMainBlueDark2};
-`;
-
 
 function About() {
     return (
-        <StyledContainer id="about-scroll-point">                   
-            <StyledBackgroundSection>                 
-                <AboutContent />
-            </StyledBackgroundSection>
+        <StyledContainer id="about-scroll-point">                        
+                <AboutContent />           
         </StyledContainer>        
     );
 }

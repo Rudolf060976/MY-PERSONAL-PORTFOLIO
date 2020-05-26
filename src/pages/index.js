@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import '../FontAwesome/library';
 import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
-import { ParallaxProvider } from 'react-scroll-parallax';
 import Projects from "../components/Projects/Projects";
 import LetsTalk from "../components/LetsTalk/LetsTalk"
 import Header from '../components/Header/Header';
@@ -17,8 +16,7 @@ const IndexPage = ({ data }) => {
   }, []);
  
 
-  return (
-    <ParallaxProvider>          
+  return (             
         <Layout>
           <SEO title="Full Stack Web developer from Venezuela Engineer Rafael Urbina" keywords="Web Developer React.js Rafael Urbina" />  
           <Header siteMetadata={data.site.siteMetadata} />    
@@ -27,7 +25,6 @@ const IndexPage = ({ data }) => {
           <Projects />
           <LetsTalk />
         </Layout>     
-    </ParallaxProvider>    
   ); 
 
 };

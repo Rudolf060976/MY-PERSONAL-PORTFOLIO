@@ -70,6 +70,7 @@ const StyledContentContainer = styled.div`
 
     width: 100%;
 
+        
 `;
 
 const StyledGridContainer = styled.div`
@@ -92,6 +93,8 @@ const StyledGridContainer = styled.div`
     margin: 0 auto;
 
     padding: 40px 0;
+
+    
 
 
     @media (max-width: 2200px) {

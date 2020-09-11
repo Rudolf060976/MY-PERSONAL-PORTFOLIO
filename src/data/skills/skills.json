@@ -33,6 +33,14 @@
             {
                 "name": "Passport.js",
                 "image": "../images/PASSPORT.png"
+            },
+            {
+                "name": "MYSQL",
+                "image": "../images/MYSQL.png"
+            },            
+            {
+                "name": "Sequelize",
+                "image": "../images/SEQUELIZE.png"
             }
         ]
     },

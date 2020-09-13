@@ -1,4 +1,5 @@
-const path = require("path")
+const path = require("path");
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions
@@ -34,4 +35,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id: node.id },
     })
   })
-}
+};

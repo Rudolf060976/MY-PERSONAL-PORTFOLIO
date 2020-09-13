@@ -163,12 +163,12 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "270px"; 
                    
                 case "2":
-                    return "720px";
+                    return "850px";
 
                 case "3":
-                    return "1170px";
+                    return "1300px";
                 case "4":
-                    return "1750px";
+                    return "1870px";
                 default:
                     return "300px";
             }
@@ -187,12 +187,12 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "270px"; 
                     
                 case "2":
-                    return "830px";
+                    return "960px";
 
                 case "3":
-                    return "1260px";
+                    return "1400px";
                 case "4":
-                    return "1950px";
+                    return "2100px";
                 default:
                     return "300px";
             }
@@ -210,12 +210,12 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "230px"; 
                    
                 case "2":
-                    return "900px";
+                    return "1070px";
 
                 case "3":
-                    return "1440px";
+                    return "1650px";
                 case "4":
-                    return "2240px";
+                    return "2490px";
                 default:
                     return "300px";
             }
@@ -231,15 +231,15 @@ const StyledContainer = styled.div.attrs(props => ({
 
             switch (props.itemID) {
                 case "1":
-                    return "160px"; 
+                    return "230px"; 
                    
                 case "2":
-                    return "830px";
+                    return "1060px";
 
                 case "3":
-                    return "1370px";
+                    return "1630px";
                 case "4":
-                    return "2170px";
+                    return "2460px";
                 default:
                     return "300px";
             }
@@ -263,12 +263,12 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "160px"; 
                    
                 case "2":
-                    return "700px";
+                    return "850px";
 
                 case "3":
-                    return "1110px";
+                    return "1280px";
                 case "4":
-                    return "1780px";
+                    return "1980px";
                 default:
                     return "300px";
             }
@@ -289,12 +289,12 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "150px"; 
                    
                 case "2":
-                    return "670px";
+                    return "800px";
 
                 case "3":
-                    return "1060px";
+                    return "1200px";
                 case "4":
-                    return "1710px";
+                    return "1860px";
                 default:
                     return "300px";
             }
@@ -314,12 +314,12 @@ const StyledContainer = styled.div.attrs(props => ({
                     return "160px"; 
                    
                 case "2":
-                    return "800px"
+                    return "950px"
 
                 case "3":
-                    return "1310px"
+                    return "1480px"
                 case "4":
-                    return "2080px"
+                    return "2270px"
                 default:
                     return "300px";
             }

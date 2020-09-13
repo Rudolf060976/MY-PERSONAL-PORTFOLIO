@@ -10,6 +10,9 @@ featured: false
 bkColor: "#F0DEA8"
 headerImage: ../images/AUTOLEARNING.png
 authorImage: ../images/RAFAEL-URBINA-PHOTO.jpg
+attachments:
+    - "../attachments/assets.zip"
+    - "../attachments/presentation.pdf"
 ---
 
 

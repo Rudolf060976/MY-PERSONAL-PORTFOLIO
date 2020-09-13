@@ -54,23 +54,29 @@ const StyledContainer = styled(BackgroundSection)`
 
      @media (max-width: 830px) {
 
-        height: 2250px;       
+        height: 2300px;       
 
     }
 
      @media (max-width: 680px) {
 
-        height: 2550px;       
+        height: 2700px;       
 
     }
 
      @media (max-width: 530px) {
 
-        height: 3000px;       
+        height: 3200px;       
 
     }
 
      @media (max-width: 410px) {
+
+        height: 2550px;       
+
+    }
+
+     @media (max-width: 370px) {
 
         height: 2400px;       
 
@@ -78,7 +84,7 @@ const StyledContainer = styled(BackgroundSection)`
 
      @media (max-width: 350px) {
 
-        height: 2800px;       
+        height: 2920px;       
 
     }
 

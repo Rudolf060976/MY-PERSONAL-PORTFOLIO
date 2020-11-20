@@ -142,6 +142,12 @@ const StyledLink = styled(Link)`
 
     }
 
+     @media (max-width: 600px) {
+
+        font-size: 16px;
+
+    }
+
 `;
 
 const StyledLocalLink = styled(LocalLink)`
